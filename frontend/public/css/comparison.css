@@ -1,0 +1,129 @@
+@charset "utf-8";
+
+#main {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  transform: translate(0, 0);
+}
+.container {
+  height: 436px;
+  overflow-y: scroll;
+  margin-top: 7%;
+}
+.container::-webkit-scrollbar {
+  display: none;
+}
+#cart h1 {
+  line-height: 40px;
+  padding: 0px 0px 10px 0px;
+}
+
+table.form {
+  border-collapse: collapse;
+  empty-cells: show;
+  margin: 20px 0px;
+  padding: 0px;
+  table-layout: fixed;
+  width: 100%;
+}
+
+table.form th,
+table.form td {
+  border-bottom: 1px solid #dddddd;
+  padding: 15px 10px;
+  text-align: left;
+}
+
+table.form1 {
+  border-top: 3px solid #dddddd;
+  table-layout: fixed;
+  position: fixed;
+}
+/* .container {
+  margin-top: 6%;
+} */
+
+.goods .goods-image img {
+  border: 1px solid #dddddd;
+  float: left;
+  height: 100px;
+  margin: 0px 20px 0px 0px;
+}
+
+.goods .goods-information {
+  float: left;
+}
+
+.goods .goods-information ul {
+  color: #666666;
+  font-size: 12px;
+  line-height: 20px;
+  margin: 10px 0px 0px 0px;
+}
+
+.price,
+.amount,
+#total-amount {
+  color: #e00000;
+}
+
+#total-amount {
+  font-size: 22px;
+}
+
+.price em,
+.amount em,
+#total-amount em {
+  font-style: normal;
+}
+
+.combo .combo-minus,
+.combo .combo-value,
+.combo .combo-plus {
+  background: #ffffff;
+  border: 1px solid #dddddd;
+  color: #333333;
+  float: left;
+  font-weight: bold;
+  margin: 0px;
+  outline: none;
+  text-align: center;
+}
+
+.combo .combo-minus,
+.combo .combo-plus {
+  font-size: 16px;
+  height: 26px;
+  line-height: 26px;
+  padding: 0px;
+  width: 24px;
+}
+
+.combo .combo-value {
+  border-left: none;
+  border-right: none;
+  height: 20px;
+  line-height: 20px;
+  padding: 2px;
+  width: 40px;
+}
+
+#cart-delete {
+  margin-left: 20px;
+}
+
+#settlement {
+  background: #e00000;
+  border: none;
+  color: #ffffff;
+  float: right;
+  font-size: 16px;
+  height: 40px;
+  line-height: 40px;
+  margin: 0px;
+  outline: none;
+  padding: 0px;
+  width: 160px;
+}
