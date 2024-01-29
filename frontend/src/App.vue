@@ -1,24 +1,19 @@
 <template>
-  <div id="app" :class="themeClass">
+  <div id="app">
     <Search />
     <router-view></router-view>
-
   </div>
 </template>
 
 <script>
-import Search from '@/views/search';
+import Search from '@/global/Search.vue';
 
 export default {
   name: 'App',
   components: {
     Search
   },
-  computed: {
-    themeClass() {
-      return "theme" + this.$store.state.theme.currentThemeIndex
-    }
-  }
+
 }
 </script>
 

@@ -5,7 +5,7 @@
 }
 
 html {
-	background: #000;
+	background: #f0efee;  // the same as $article-bg
 }
 
 body {
@@ -13,6 +13,7 @@ body {
 	min-height: 100vh;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+    transition: opacity 0.5s;
 }
 
 button{

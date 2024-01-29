@@ -1,8 +1,8 @@
 <template>
     <div id="article-set-list">
 
-        <div class="top-bar" :class="{ 'visible': listVisible }">
-            <button class="home-btn" @click="changeVisibility">
+        <div class="top-bar" :class="{ 'visible': curtainVisible }">
+            <button class="home-btn" @click="changeCurtainVisibility">
                 <svg xmlns=" http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 24 24"
                     class="icon">
                     <path
@@ -12,12 +12,9 @@
             </button>
         </div>
 
-
-
-        <div class="list" :class="{ visible: listVisible }">
-            <List />
+        <div class="list" v-if="curtainVisible" :class="{ 'visible': curtainVisible }">
+            <List :theme="theme" />
         </div>
-
 
         <svg class="shape-overlays" viewBox="0 0 100 100" preserveAspectRatio="none">
             <path class="shape-overlays__path"></path>
@@ -28,10 +25,11 @@
     </div>
 </template>
 <script>
-import List from './List.vue'
+import List from '@/views/article-set-list/index.vue'
 export default {
-    name: "HomeArticleSetList",
+    name: "HomeCurtain",
     components: { List },
+    props: ['theme'],
     data() {
         return {
             elm: null,
@@ -44,7 +42,7 @@ export default {
             timeStart: null,
             isOpened: false,
             isAnimating: false,
-            listVisible: false,
+            curtainVisible: false,
         }
     },
     methods: {
@@ -64,11 +62,11 @@ export default {
             if (this.isOpened === false) {
                 this.open();
                 setTimeout(() => {
-                    this.listVisible = true
+                    this.curtainVisible = true
                 }, 1000)
             } else {
                 this.close();
-                this.listVisible = false
+                this.curtainVisible = false
             }
         },
         open() {
@@ -132,7 +130,7 @@ export default {
                 this.isAnimating = false;
             }
         },
-        changeVisibility() {
+        changeCurtainVisibility() {
             // @ts-ignore
             this.elm = document.querySelector('.shape-overlays');
             // @ts-ignore
@@ -143,7 +141,6 @@ export default {
                 return false;
             }
             this.toggle();
-
         }
     }
 

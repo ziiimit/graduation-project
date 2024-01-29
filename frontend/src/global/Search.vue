@@ -10,7 +10,6 @@
                     <path
                         d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
                 </symbol>
-
             </defs>
         </svg>
 
@@ -95,6 +94,7 @@ export default {
 <style scoped lang='scss'>
 @import "@/style/color.scss";
 
+
 #search {
     position: absolute;
     width: 100%;
@@ -111,26 +111,17 @@ export default {
 
 
 /* 搜索按钮以及取消按钮 */
-.btn {
-    .theme0 & {
-        color: $theme0-menu-active;
-    }
-
-    .theme1 & {
-        color: $theme1-menu-active;
-    }
-
-    .theme2 & {
-        color: $theme2-menu-active;
-    }
-
-}
 
 .btn--search {
     position: absolute;
     font-size: 1.5em;
     right: 40px;
     top: 20px;
+    color: rgb(133, 133, 133);
+}
+
+.btn--search-close {
+    color: rgb(51, 61, 80);
 }
 
 
@@ -147,18 +138,7 @@ export default {
     justify-content: center;
     align-items: center;
     text-align: center;
-
-    .theme0 & {
-        background: $theme0-search-background;
-    }
-
-    .theme1 & {
-        background: $theme1-search-background;
-    }
-
-    .theme2 & {
-        background: $theme2-search-background;
-    }
+    background: rgba(255, 255, 255, 0.843);
 }
 
 
@@ -169,18 +149,7 @@ export default {
     width: calc(100% + 15px);
     height: calc(100% + 15px);
     pointer-events: none;
-
-    .theme0 & {
-        border: 1.5em solid $theme0-search-border;
-    }
-
-    .theme1 & {
-        border: 1.5em solid $theme1-search-border;
-    }
-
-    .theme2 & {
-        border: 1.5em solid $theme2-search-border;
-    }
+    border: 1.5em solid rgb(51, 61, 80);
 }
 
 .search::before {
@@ -209,6 +178,18 @@ export default {
     margin: 5em 0;
 }
 
+/* Reset Search Input */
+
+.search__input {
+    border: 0;
+    background: transparent;
+    border-radius: 0;
+}
+
+.search__input:focus {
+    outline: none;
+}
+
 .search__input {
     font-family: inherit;
     font-size: 10vw;
@@ -217,24 +198,8 @@ export default {
     box-sizing: border-box;
     width: 75%;
     padding: 0.05em 0;
-
-
-    .theme0 & {
-        color: $theme0-menu-active;
-        border-bottom: 2px solid $theme0-menu-active;
-    }
-
-    .theme1 & {
-        color: $theme1-menu-active ;
-        border-bottom: 2px solid $theme1-menu-active;
-
-    }
-
-    .theme2 & {
-        color: $theme2-menu-active;
-        border-bottom: 2px solid $theme2-menu-active;
-
-    }
+    color: rgb(51, 61, 80);
+    border-bottom: 2px solid rgba(51, 61, 80, 0.615);
 }
 
 .search__input::-webkit-search-cancel-button,
@@ -254,18 +219,8 @@ export default {
     margin: 0 auto;
     padding: 0.85em 0;
     text-align: right;
+    color: rgba(51, 61, 80, 0.688);
 
-    .theme0 & {
-        color: $theme0-menu-active;
-    }
-
-    .theme1 & {
-        color: $theme1-menu-active;
-    }
-
-    .theme2 & {
-        color: $theme2-menu-active;
-    }
 }
 
 .search__related {
@@ -277,7 +232,7 @@ export default {
 .search__suggestion {
     width: 33.33%;
     text-align: left;
-    color: gray
+    color: rgb(51, 61, 80)
 }
 
 .search__suggestion:nth-child(2) {
@@ -403,18 +358,5 @@ export default {
     .search__suggestion:nth-child(3) {
         display: none;
     }
-}
-
-
-/* Reset Search Input */
-
-.search__input {
-    border: 0;
-    background: transparent;
-    border-radius: 0;
-}
-
-.search__input:focus {
-    outline: none;
 }
 </style>

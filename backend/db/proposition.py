@@ -107,3 +107,40 @@ def getCorrespondingParagraph(propositionID):
             """, id=propositionID)
             return result.data()[0]
         
+
+
+def addPropositionsToParagraph(articleTitle, paragraphSequence,propositionList):
+    with GraphDatabase.driver(URI, auth=AUTH) as driver:
+
+        driver.verify_connectivity()
+
+        with driver.session(database="neo4j") as session:
+
+            for proposition in propositionList:
+                # print(proposition)
+                session.run("""
+                    MATCH (:Article {title:$title})-[:CONSTRUCTED_BY]->(p:Paragraph {sequence:$sequence})
+                    CREATE (proposition:Proposition {content:$content})-[:GENERATED_FROM]->(p)
+                    SET proposition.hasEmbedding = False
+                """, title=articleTitle, sequence=paragraphSequence,content=proposition)
+            
+            session.run("""
+                MATCH (:Article {title:$title})-[:CONSTRUCTED_BY]->(p:Paragraph {sequence:$sequence})
+                SET p.hasPropositions = True
+            """, title=articleTitle, sequence=paragraphSequence)
+
+
+def hasPropositions(articleTitle, paragraphSequence):
+    with GraphDatabase.driver(URI, auth=AUTH) as driver:
+
+        driver.verify_connectivity()
+
+        with driver.session(database="neo4j") as session:
+
+            result = session.run("""
+                MATCH (:Article {title:$title})-[:CONSTRUCTED_BY]->(p:Paragraph {sequence:$sequence})
+                RETURN p.hasPropositions as hasPropositions
+        """,title=articleTitle,sequence=paragraphSequence)
+            
+            return result.data()[0]['hasPropositions']
+ 

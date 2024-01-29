@@ -90,7 +90,7 @@ can
 cannot
 cant
 can't
-caption
+title
 cause
 causes
 certain

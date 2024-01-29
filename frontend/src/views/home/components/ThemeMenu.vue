@@ -11,17 +11,14 @@ export default {
     name: "HomeThemeMenu",
     data() {
         return {
-            themes: this.$store.state.theme.themes
-        }
-    },
-    computed: {
-        currentThemeIndex() {
-            return this.$store.state.theme.currentThemeIndex
+            themes: this.$store.state.theme.themes,
+            currentThemeIndex: 0
         }
     },
     methods: {
         changeTheme(index) {
-            this.$store.commit('theme/setCurrentThemeIndex', index)
+            this.$emit('changeTheme', index)
+            this.currentThemeIndex = index
         }
     }
 }

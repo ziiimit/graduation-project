@@ -5,7 +5,8 @@ sys.path.append(os.path.dirname(SCRIPT_DIR))
 
 import time
 
-from db.article import getAllArticleTitle, addPropositionsToParagraph, hasPropositions,getParagraphList
+from db.article import getAllArticleTitle,getParagraphList
+from db.proposition import  addPropositionsToParagraph, hasPropositions
 from langchain.schema import HumanMessage, SystemMessage
 from langchain_openai import ChatOpenAI
 from langchain import hub
@@ -55,9 +56,9 @@ def generatePropositionForArticle(articleTitle):
         addPropositionsToParagraph(articleTitle=articleTitle, paragraphSequence=sequence, propositionList=propositionList)
 
 
-# generatePropositionForArticle("Understanding anorexia nervosa")
-titleList = getAllArticleTitle()
-for title in titleList:
-    generatePropositionForArticle(title)
+# # generatePropositionForArticle("Understanding anorexia nervosa")
+# titleList = getAllArticleTitle()
+# for title in titleList:
+#     generatePropositionForArticle(title)
 
 

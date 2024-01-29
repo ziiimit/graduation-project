@@ -1,18 +1,19 @@
-// Home主页
-$theme0-bg: #e9cc86;
-$theme0-title: #fff;
-$theme0-moreBtn-text:#ab6866;
-$theme0-moreBtn-cricle:#ac706e;
-$theme0-menu-active:#ac706e;
-$theme0-menu-not-active: #fff;
-$theme0-search-btn:#ac706e;
-$theme0-search-border:#e4c37d;
-$theme0-search-background:#ffffffee;
 // Article set列表的显示动画
 $theme0-path-fill-1:#f1ebdc;
 $theme0-path-fill-2: #ccb886;
 $theme0-path-fill-3: #6f5b30;
 $theme0-path-fill-4: #31230d;
+// Home主页
+$theme0-bg: #e9cc86;
+$theme0-title: #fff;
+$theme0-moreBtn-text:$theme0-path-fill-3;
+$theme0-moreBtn-cricle:$theme0-path-fill-3;
+$theme0-menu-active:$theme0-path-fill-3;
+$theme0-menu-not-active: #d6d3cf;
+$theme0-search-btn:#fff;
+$theme0-search-border:#e4c37d;
+$theme0-search-background:#ffffffee;
+
 
 
 $theme1-bg: #24262c;
@@ -30,6 +31,8 @@ $theme1-path-fill-2: #869ccc;
 $theme1-path-fill-3: #30436f;
 $theme1-path-fill-4: #0d1831;
 
+
+
 $theme2-bg: #ebe7df;
 $theme2-title: #b24d49;
 $theme2-moreBtn-text:#b34c48;
@@ -44,3 +47,9 @@ $theme2-path-fill-1:#f1e2dc;
 $theme2-path-fill-2: #cc8686;
 $theme2-path-fill-3: #6f3030;
 $theme2-path-fill-4: #310d0d;
+
+
+
+// article-set
+$article-bg:#f0efee;
+$article-font:#434d5a;

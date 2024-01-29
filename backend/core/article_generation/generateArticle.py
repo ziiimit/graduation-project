@@ -11,7 +11,7 @@ MODEL = OpenAI(openai_api_key=openai_api_key, temperature=0)
 
 
 
-def generateArticleRawText(rawText, theme, videoCaption, articleIndex):
+def generateArticleRawText(rawText, theme, articleSetCaption, articleIndex):
    
    prompt = PromptTemplate(
       template="""
@@ -35,7 +35,7 @@ def generateArticleRawText(rawText, theme, videoCaption, articleIndex):
    output = chain.invoke({"text": rawText})
 
    prefix = "/Users/huangshihui/Downloads/backend/data/generated_article/"
-   path = prefix + theme +"/" + videoCaption + "/" + f"{articleIndex}.txt"
+   path = prefix + theme +"/" + articleSetCaption + "/" + f"{articleIndex}.txt"
 
    with open(path,"a") as f:
       f.write(output.content)
@@ -43,9 +43,9 @@ def generateArticleRawText(rawText, theme, videoCaption, articleIndex):
 
 
 
-def getArticleRawText(theme, videoCaption, articleIndex):
+def getArticleRawText(theme, articleSetCaption, articleIndex):
     prefix = "/Users/huangshihui/Downloads/backend/data/generated_article/"
-    path = prefix + theme +"/" + videoCaption + "/" + f"{articleIndex}.txt"
+    path = prefix + theme +"/" + articleSetCaption + "/" + f"{articleIndex}.txt"
     with open(path) as f:
         return f.read()
     

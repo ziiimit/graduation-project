@@ -1,47 +1,47 @@
 <template>
-    <div id="home">
+    <div id="home" :class="currentTheme.colorTheme">
 
-
-        <div class="wrapper">
+        <div class="title-wrapper">
             <div class="theme-title">{{ currentTheme["themeName_zh"] }}</div>
             <div class="sub-title">{{ currentTheme["themeName_en"] }}</div>
         </div>
 
-        <MoreBtn @showArticleSetList="changeArticleSetListVisibility" />
+        <MoreBtn @showCurtain="changeCurtainVisibility" />
 
-        <ThemeMenu v-show="themeMenuVisible" />
+        <ThemeMenu v-show="themeMenuVisible" @changeTheme="(current) => { this.currentThemeIndex = current }" />
 
-        <ArticleSetList ref="article-set-list" @closed="showThemeMenu" />
+        <Curtain :theme="themes[currentThemeIndex]" ref="article-set-list" @closed="showThemeMenu" />
 
     </div>
 </template>
 <script>
 import MoreBtn from './components/MoreBtn.vue'
 import ThemeMenu from './components/ThemeMenu.vue'
-import ArticleSetList from './components/ArticleSetList/index.vue'
+import Curtain from './components/Curtain.vue'
 
 export default {
     name: "Home",
     components: {
         MoreBtn,
         ThemeMenu,
-        ArticleSetList
+        Curtain
     },
     data() {
         return {
             themes: this.$store.state.theme.themes,
-            themeMenuVisible: true
+            themeMenuVisible: true,
+            currentThemeIndex: 0
         }
     },
     computed: {
         currentTheme() {
-            return this.themes[this.$store.state.theme.currentThemeIndex]
-        }
+            return this.themes[this.currentThemeIndex]
+        },
     },
     methods: {
-        changeArticleSetListVisibility() {
+        changeCurtainVisibility() {
             this.themeMenuVisible = false
-            this.$refs['article-set-list'].changeVisibility()
+            this.$refs['article-set-list'].changeCurtainVisibility()
         },
         showThemeMenu() {
             setTimeout(() => {
@@ -64,15 +64,15 @@ export default {
     gap: 50px;
     transition: all 0.2s;
 
-    .theme0 & {
+    &.theme0 {
         background-color: $theme0-bg;
     }
 
-    .theme1 & {
+    &.theme1 {
         background-color: $theme1-bg;
     }
 
-    .theme2 & {
+    &.theme2 {
         background-color: $theme2-bg;
     }
 }
