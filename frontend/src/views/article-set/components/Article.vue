@@ -24,13 +24,12 @@ export default {
 .paragraph-list {
     height: calc(100vh - 150px);
     overflow: scroll;
-    padding: 20px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    padding: 20px 20px 0;
     border-radius: 20px;
 
     li {
         text-indent: 2em;
-        font-size: 18px;
+        font-size: 20px;
         padding-bottom: 20px;
         max-width: 800px;
         margin: auto;

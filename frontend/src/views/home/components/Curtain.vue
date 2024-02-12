@@ -25,7 +25,7 @@
     </div>
 </template>
 <script>
-import List from '@/views/article-set-list/index.vue'
+import List from '@/views/article-set-list/components/List.vue'
 export default {
     name: "HomeCurtain",
     components: { List },

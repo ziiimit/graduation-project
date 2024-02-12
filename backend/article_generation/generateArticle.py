@@ -24,7 +24,9 @@ def generateArticleRawText(rawText, theme, articleSetCaption, articleIndex):
         Content should only include plain paragraph and no subtitle.
         Content should be easy to read and understood.
 
-        Output Format: first line is title , next line follows the article content body
+        Output Format: first line is title , next line follows the article content body.
+
+        Separate the article into paragraphs.
 
         Text：{text}""",
         input_variables=["text"],

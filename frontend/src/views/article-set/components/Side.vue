@@ -10,10 +10,8 @@
         </button>
 
         <h1 class="article-set-title">{{ articleSet.title }}</h1>
-        <div class="theme-btn">
-            <hr>
+        <div class="theme-btn" @click="goToArticleSetListPage">
             {{ articleSet.theme }}
-            <hr>
         </div>
         <ul class="article-list">
             <li v-for="(article, index) in articleSet.articles" @click="setCurrentArticleIndex(index)"
@@ -42,6 +40,9 @@ export default {
         },
         goToHome() {
             this.$router.push({ name: "Home" })
+        },
+        goToArticleSetListPage() {
+            this.$router.push({ name: "ArticleSetList", params: { theme: this.articleSet.theme } })
         },
         getTheme() {
             return this.articleSet['theme']
@@ -116,47 +117,32 @@ export default {
 }
 
 .theme-btn {
-    margin-top: 20px;
+    margin-top: 30px;
+    display: inline-block;
     cursor: pointer;
-    transition: all 0.2s;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    padding: 0 3px;
+    transition: all 0.1s;
+    padding: 5px 10px;
+    border-radius: 30px;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 
-    hr:nth-child(1) {
-        width: 90%;
-
+    .theme0 & {
+        border: 2px solid $theme0-path-fill-2;
+        background-color: $theme0-path-fill-3;
     }
 
-    hr:nth-child(2) {
-        width: 100%;
+    .theme1 & {
+        border: 2px solid $theme1-path-fill-2;
+        background-color: $theme1-path-fill-3;
+    }
+
+    .theme2 & {
+        border: 2px solid $theme2-path-fill-2;
+        background-color: $theme2-path-fill-3;
     }
 
     &:hover {
-        .theme0 & {
-            color: $theme0-path-fill-2;
-
-            hr {
-                border-color: $theme0-path-fill-1;
-            }
-        }
-
-        .theme1 & {
-            color: $theme1-path-fill-2;
-
-            hr {
-                border-color: $theme1-path-fill-1;
-            }
-        }
-
-        .theme2 & {
-            color: $theme2-path-fill-2;
-
-            hr {
-                border-color: $theme2-path-fill-1;
-            }
-        }
-
+        opacity: 0.9;
     }
 }
 

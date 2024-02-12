@@ -69,3 +69,21 @@ def getAeticleSetTheme(articleSetTitle):
             """,title=articleSetTitle)
 
             return result.data()[0]['t']
+
+
+def getArticleSetTitleByArticleID(articleID):
+
+    with GraphDatabase.driver(URI, auth=AUTH) as driver:
+
+        driver.verify_connectivity()
+
+        with driver.session(database="neo4j") as session:
+
+            result = session.run("""
+                MATCH (a:Article)-[:GENERATED_FROM]->(as:ArticleSet)
+                WHERE ID(a) = $id
+                RETURN as.title as title
+            """,id=articleID)
+
+            return result.data()[0]['title']
+

@@ -68,6 +68,7 @@ def createArticle(url, article, replace=True):
             """, title=article["title"], sequence=index, content=paragraph)
 
 
+# 获取某个article的所有paragraph
 def getParagraphList(articleID):
 
     
@@ -101,8 +102,8 @@ def getAllArticleTitle():
            return articles
         
 
-# 找某个paragraph对应的Article
-def getCorrespondingArticle(paragraphID):
+# 找某个paragraph对应的Article，包含title、id、sequence
+def getArticleByParagraphID(paragraphID):
             
     with GraphDatabase.driver(URI, auth=AUTH) as driver:
 
@@ -113,7 +114,6 @@ def getCorrespondingArticle(paragraphID):
             result = session.run("""
                 MATCH (a:Article)-[:CONSTRUCTED_BY]->(para:Paragraph)
                 WHERE ID(para) = $id
-                RETURN a.title as title
+                RETURN a.sequence as sequence, a.title as title, ID(a) as id
             """, id=paragraphID)
-            return result.data()[0]['title']
-        
+            return result.data()[0]

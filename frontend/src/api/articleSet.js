@@ -1,5 +1,6 @@
 import axios from 'axios';
 
+// params = theme = {themeName_en}
 export function getThemeArticleSetList(params) {
     return new Promise((resolve, reject) => {
         axios.get('/themeArticleSet/articleSetList', {
@@ -12,6 +13,7 @@ export function getThemeArticleSetList(params) {
     })
 }
 
+// params = articleSet = {title}
 export function getArticleSet(params) {
     return new Promise((resolve, reject) => {
         axios.get('/themeArticleSet/articleSet', {
@@ -24,6 +26,7 @@ export function getArticleSet(params) {
     })
 }
 
+// params = article = {title,id}
 export function getArticle(params) {
     return new Promise((resolve, reject) => {
         axios.get('/themeArticleSet/article', {

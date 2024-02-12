@@ -86,7 +86,8 @@ export default {
 
         },
         search() {
-            console.log(this.inputContent)
+            this.closeSearch()
+            this.$router.push({ name: "SearchResult", query: { input: this.inputContent } })
         }
     }
 }

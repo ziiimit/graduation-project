@@ -24,6 +24,7 @@ export default {
         }
     },
     methods: {
+        // article = {title,id}
         getArticle(article) {
             this.showLoading = true
             getArticle(article).then(res => {

@@ -24,6 +24,7 @@ export default {
     border: 3px solid transparent;
     border-radius: 50%;
     animation: loading 1s ease infinite;
+    border-top-color: #353d4e; // defalut color
 
     .theme0 & {
         border-top-color: $theme0-path-fill-3;

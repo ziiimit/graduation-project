@@ -19,8 +19,6 @@ AUTH = ("neo4j","13320113557Hsh")
             
 #             return len(result.data()) > 0
 
-
-
             
 def getThemeArticleSetTitleList(themeName):
 
@@ -38,6 +36,18 @@ def getThemeArticleSetTitleList(themeName):
             return [item['title'] for item in result]
 
             
+def getThemeNameByArticleSetTitle(articleSetTitle):
 
+    with GraphDatabase.driver(URI, auth=AUTH) as driver:
+
+        driver.verify_connectivity()
+
+        with driver.session(database="neo4j") as session:
+
+            result = session.run("""
+            MATCH (as:ArticleSet {title: $title})-[:BELONGS_TO]->(t:Theme)
+            return t.name as name
+         """, title = articleSetTitle)
             
-
+            return result.data()[0]['name']
+            
