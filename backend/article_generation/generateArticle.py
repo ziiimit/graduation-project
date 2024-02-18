@@ -1,40 +1,54 @@
 from langchain.prompts import PromptTemplate
-from langchain_openai import OpenAI
-from article_generation.getTranscripts import article_dir_path, transcript_path
-import os
+from openai import OpenAI
 
 
+api_key = "sk-zk29795f32167f6443e112ce116990fe14f65d1947169cd3"
+base_url = "https://flag.smarttrot.com/v1/"
 
-openai_api_key = "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"
-MODEL = OpenAI(openai_api_key=openai_api_key, temperature=0)
 
+# 首先，移除transcripts中和主体无关的内容，如寒暄、自我介绍、品牌推广等内容
+# 以视频的标题作为中心主题，去除无关的内容
+def filter(rawText,title):
+    client = OpenAI(api_key=api_key,base_url=base_url)
 
+    template=f"""
+        Subject: {title}
+        Text:{rawText}
+    """
+    resp = client.chat.completions.create(
+        model="gpt-3.5-turbo-0125",
+        messages=[
+            {"role":"system", "content":"Your job is to filter the content of the given text that is irrelevant to the given subject"},
+            {"role":"system", "content":"Response should only contain filtered text with no blankline."},
+            {"role":"user", "content":template}
+        ]
+    )
+    
+    print(resp.choices[0].message.content)
 
 
 def generateArticleRawText(rawText, theme, articleSetCaption, articleIndex):
    
    prompt = PromptTemplate(
       template="""
-        You are the author of the text below, write an article based on it,
-        pay attention to the knowledge with regard to the neuroscience and the advice if is given.
-        
-        Title should be as simple as possible
+        Write an article based on the given video transcripts
 
-        Content must not have conclusion.
-        Content should only include plain paragraph and no subtitle.
+        Content should only include plain paragraphs and no subtitle.
         Content should be easy to read and understood.
+
+        Filter the content that is irrelevant to the subject "ADHD & How Anyone Can Improve Their Focus"
 
         Output Format: first line is title , next line follows the article content body.
 
         Separate the article into paragraphs.
 
-        Text：{text}""",
-        input_variables=["text"],
+        Text：{rawText}""",
+        input_variables=["rawText"],
     )
    
    chain = prompt | MODEL 
 
-   output = chain.invoke({"text": rawText})
+   output = chain.invoke({"rawText": rawText})
 
    prefix = "/Users/huangshihui/Downloads/backend/data/generated_article/"
    path = prefix + theme +"/" + articleSetCaption + "/" + f"{articleIndex}.txt"
@@ -44,11 +58,10 @@ def generateArticleRawText(rawText, theme, articleSetCaption, articleIndex):
 
 
 
-
 def getArticleRawText(theme, articleSetCaption, articleIndex):
     prefix = "/Users/huangshihui/Downloads/backend/data/generated_article/"
     path = prefix + theme +"/" + articleSetCaption + "/" + f"{articleIndex}.txt"
-    with open(path) as f:
+    with open(rf'{path}') as f:
         return f.read()
     
 
@@ -64,10 +77,11 @@ def getArticleObject(rawText, articleIndex):
     }
 
 
+# with open(r'/Users/huangshihui/Downloads/graduation-project/backend/data/generated_article/mental_health_and_addiction/The Scienc & Treatment of Bipolar Disorder/0.txt')  as f:
+#     print(f.read())
 
-
+# print(getArticleRawText('mental_health_and_addiction','The Scienc & Treatment of Bipolar Disorder',0))
     
-
 
    
 

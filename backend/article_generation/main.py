@@ -5,7 +5,7 @@ sys.path.append(os.path.dirname(SCRIPT_DIR))
 
 import json
 
-from getTranscripts import getArticleSetTransctipt
+from backend.article_generation.transcript import getTranscript
 from generateArticle import *
 from generatePropositon import *
 from db.articleSet import *
@@ -25,7 +25,7 @@ with open("/Users/huangshihui/Downloads/backend/data/metadata.json") as f:
     articleSetURL = articleSet["url"]
     articleSetCaption = articleSet["title"]
 
-getArticleSetTransctipt(url=articleSetURL, title=articleSetCaption, theme=theme)
+getTranscript(url=articleSetURL, title=articleSetCaption, theme=theme)
 
 
 

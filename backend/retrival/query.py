@@ -18,7 +18,7 @@ from db.theme import getThemeNameByArticleSetTitle
 
 from langchain.prompts import PromptTemplate
 from langchain_openai import OpenAI
-openai_api_key = "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"
+openai_api_key = "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"
 MODEL = OpenAI(openai_api_key=openai_api_key, temperature=0)
 
 def generateResponse(corpus,userInput_en):

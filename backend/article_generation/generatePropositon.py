@@ -12,7 +12,7 @@ from langchain_openai import ChatOpenAI
 from langchain import hub
 
 
-openai_api_key = "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"
+openai_api_key = "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"
 
 
 
@@ -54,6 +54,8 @@ def generatePropositionForArticle(articleTitle):
         propositionList = [item.removeprefix('"').removesuffix('"') for item in propositionList]
 
         addPropositionsToParagraph(articleTitle=articleTitle, paragraphSequence=sequence, propositionList=propositionList)
+
+
 
 
 # # generatePropositionForArticle("Understanding anorexia nervosa")
