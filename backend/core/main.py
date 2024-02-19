@@ -7,7 +7,7 @@ import json
 
 from backend.article_generation.transcript import getTranscript
 from generateArticle import *
-from generatePropositon import *
+from generateProposition import *
 from db.articleSet import *
 from db.article import *
 
