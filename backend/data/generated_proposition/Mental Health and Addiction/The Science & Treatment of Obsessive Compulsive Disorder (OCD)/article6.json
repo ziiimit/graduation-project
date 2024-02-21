@@ -1,0 +1,69 @@
+{
+    "metadata": {
+        "theme": "Mental Health and Addiction",
+        "videoTitle": "The Science & Treatment of Obsessive Compulsive Disorder (OCD)",
+        "articleSequence": 6
+    },
+    "paragraphList": [
+        {
+            "sequence": 0,
+            "proposition": [
+                "The cortico-striatal-thalamic loop has been identified as a key circuit involved in Obsessive-Compulsive Disorder (OCD) through various studies conducted on human subjects.",
+                "The key circuit involved in Obsessive-Compulsive Disorder (OCD) is the cortico-striatal-thalamic loop.",
+                "Researchers have designed experiments in laboratories to evoke obsessions and compulsions in individuals with OCD by exposing them to stimuli that trigger their symptoms.",
+                "The experiments designed by researchers aim to evoke obsessions and compulsions in individuals with OCD.",
+                "The stimuli used in the experiments are designed to trigger the symptoms of individuals with OCD.",
+                "These experiments often involve scenarios related to order and cleanliness.",
+                "The scenarios used in the experiments are often related to order and cleanliness.",
+                "Germs or contaminated objects are presented to individuals who have obsessions about cleanliness.",
+                "Individuals who have obsessions about cleanliness are presented with germs or contaminated objects.",
+                "By using techniques like positron emission tomography (PET) scanning, researchers can observe the patterns of brain activation in individuals with OCD while they are experiencing their compulsions.",
+                "Researchers can observe the patterns of brain activation in individuals with OCD using techniques like positron emission tomography (PET) scanning.",
+                "The individuals with OCD are experiencing their compulsions, such as hand washing, during the brain activation observations."
+            ]
+        },
+        {
+            "sequence": 1,
+            "proposition": [
+                "These studies consistently demonstrate increased neural activity in the cortico-striatal-thalamic loop in individuals with OCD during symptom provocation.",
+                "Certain drug treatments, like selective serotonin reuptake inhibitors (SSRIs), are effective in reducing obsessions and compulsions.",
+                "The effectiveness of SSRIs correlates with decreased activity in the cortico-striatal-thalamic loop.",
+                "SSRIs may not work for all individuals with OCD and may have side effects.",
+                "The impact of SSRIs on the cortico-striatal-thalamic loop provides further evidence of the circuit's involvement in the disorder."
+            ]
+        },
+        {
+            "sequence": 2,
+            "proposition": [
+                "Animal studies have contributed to understanding the cortico-striatal-thalamic loop and its role in OCD.",
+                "Researchers have utilized animal models to manipulate neural activity in this circuit.",
+                "Researchers have induced OCD-like behaviors in animals that did not previously exhibit such symptoms.",
+                "Animal model studies support the notion that aberrant functioning in the cortico-striatal-thalamic loop can lead to the development of OCD."
+            ]
+        },
+        {
+            "sequence": 3,
+            "proposition": [
+                "One notable study was conducted by Susanne Ahmari and her colleagues.",
+                "Susanne Ahmari conducted the study.",
+                "The study involved stimulating the cortico-striatal circuitry in mice.",
+                "The mice had no prior OCD-like behaviors.",
+                "The results showed that the mice began exhibiting excessive grooming behaviors.",
+                "The excessive grooming behaviors were akin to compulsive rituals seen in individuals with OCD.",
+                "This highlights the direct influence of the cortico-striatal-thalamic loop on the manifestation of OCD symptoms.",
+                "The manifestation of OCD symptoms was observed even in animal subjects."
+            ]
+        },
+        {
+            "sequence": 4,
+            "proposition": [
+                "The convergence of findings from human imaging studies suggests that the cortico-striatal-thalamic loop plays a vital role in the pathophysiology of OCD.",
+                "The convergence of findings from treatment responses suggests that the cortico-striatal-thalamic loop plays a vital role in the pathophysiology of OCD.",
+                "The convergence of findings from animal experiments suggests that the cortico-striatal-thalamic loop plays a vital role in the pathophysiology of OCD.",
+                "The cortico-striatal-thalamic loop appears to be a central component in generating OCD-like behaviors.",
+                "Other brain circuits may also contribute to the disorder.",
+                "Further research into the cortico-striatal-thalamic loop and its interactions with other neural pathways may provide valuable insights for developing more targeted treatments for individuals with OCD."
+            ]
+        }
+    ]
+}

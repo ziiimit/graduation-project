@@ -10,10 +10,12 @@ def getArticleDirPath(theme,videoTitle):
     path_articleDir = PROJECT_ROOT + f'/data/generated_article/{theme}/{videoTitle}'
     return path_articleDir
 
-def getArticleFilePathList(theme,videoTitle):
+def getArticleFilePathList(theme,videoTitle,removeList=[]):
     path_articleDir = PROJECT_ROOT + f'/data/generated_article/{theme}/{videoTitle}'
     articleFileNameList = os.listdir(path_articleDir)
     articleFileNameList.remove('intro.json')
+    for item in removeList:
+        articleFileNameList.remove(item)
     articleFilePathList = [path_articleDir + f'/{fileName}' for fileName in articleFileNameList]
 
     return articleFilePathList

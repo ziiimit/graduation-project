@@ -1,10 +1,10 @@
 import os
 import sys
-PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(__file__))))
 sys.path.append(PROJECT_ROOT)
+from utils.path import *
 import json
 from utils.translate import toChinese
-from utils.path import *
 from database.articleset import createArticleSet
 from database.article import createArticle_insertParagraph
 from database.proposition import createPropositonForParagraph
@@ -14,9 +14,11 @@ def storeArticleSet(sourceVideoURL,theme,videoTitle):
     # 获取intro
     path_intro = getIntroFilePath(theme=theme,videoTitle=videoTitle)
     f = open(path_intro,'r',encoding='utf-8') 
-    intro = json.load(f)['content']
+    fileContent = json.load(f)
+    intro_en = fileContent['text_en']
+    intro_zh = fileContent['text_zh']
     f.close()
-
+    
     # 获取videoTitle的中文翻译
     title_zh = toChinese(videoTitle)
 
@@ -26,7 +28,8 @@ def storeArticleSet(sourceVideoURL,theme,videoTitle):
         theme=theme,
         title_en=videoTitle,
         title_zh=title_zh,
-        intro=intro
+        intro_en=intro_en,
+        intro_zh = intro_zh
     )
         
 def storeArticle_storePararaph(sourceVideoURL,theme,videoTitle):

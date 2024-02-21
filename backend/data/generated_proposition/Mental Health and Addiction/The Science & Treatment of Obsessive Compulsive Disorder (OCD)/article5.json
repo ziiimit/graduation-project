@@ -1,0 +1,88 @@
+{
+    "metadata": {
+        "theme": "Mental Health and Addiction",
+        "videoTitle": "The Science & Treatment of Obsessive Compulsive Disorder (OCD)",
+        "articleSequence": 5
+    },
+    "paragraphList": [
+        {
+            "sequence": 0,
+            "proposition": [
+                "Obsessive-compulsive disorder (OCD) is a complex condition.",
+                "Obsessive-compulsive disorder (OCD) involves intricate neural circuits and chemical systems in the brain.",
+                "The biological mechanisms underlying obsessive-compulsive disorder (OCD) are closely connected with the cortico-striatal-thalamic loop.",
+                "The cortico-striatal-thalamic loop plays a vital role in generating obsessions and compulsions.",
+                "The cortico-striatal-thalamic loop involves several key brain regions such as the cortex, striatum, and thalamus.",
+                "The cortex, striatum, and thalamus interact in a coordinated manner in the cortico-striatal-thalamic loop."
+            ]
+        },
+        {
+            "sequence": 1,
+            "proposition": [
+                "The cortex is the outer shell of the brain.",
+                "The cortex is responsible for the perception and understanding of sensory information.",
+                "The cortex processes incoming data.",
+                "The cortex plays a crucial role in recognizing patterns.",
+                "The cortex plays a crucial role in predicting future events based on past experiences.",
+                "The striatum is involved in action selection and inhibition.",
+                "The striatum includes the basal ganglia.",
+                "The striatum manages the execution of behaviors.",
+                "The striatum distinguishes between go behaviors (actions).",
+                "The striatum distinguishes between no-go behaviors (resistance to actions)."
+            ]
+        },
+        {
+            "sequence": 2,
+            "proposition": [
+                "The thalamus is situated at the center of the brain.",
+                "The thalamus acts as a relay station for sensory information from the environment to the cortex.",
+                "The thalamus filters incoming sensory inputs.",
+                "The thalamus allows only selected information to reach conscious awareness.",
+                "The thalamic reticular nucleus is a component of the thalamus.",
+                "The thalamic reticular nucleus modulates the flow of information.",
+                "The thalamic reticular nucleus influences what enters our conscious perception.",
+                "The gating mechanism is regulated by the neurotransmitter GABA.",
+                "GABA inhibits the activity of other neurons.",
+                "GABA dictates which sensory experiences become consciously accessible."
+            ]
+        },
+        {
+            "sequence": 3,
+            "proposition": [
+                "The cortico-striatal-thalamic loop operates in a continuous feedback loop.",
+                "In the loop, the cortex, striatum, and thalamus communicate with each other.",
+                "The communication among the cortex, striatum, and thalamus regulates behavior and perception.",
+                "Dysfunction in the cortico-striatal-thalamic loop is believed to contribute to the development and manifestation of OCD symptoms.",
+                "Studies using neuroimaging techniques have identified increased activity in the cortico-striatal-thalamic loop in individuals with OCD.",
+                "The increased activity in the cortico-striatal-thalamic loop in individuals with OCD highlights its significance in the disorder."
+            ]
+        },
+        {
+            "sequence": 4,
+            "proposition": [
+                "Understanding the biological underpinnings of OCD is essential for developing effective treatments.",
+                "The biological underpinnings of OCD include the cortico-striatal-thalamic loop.",
+                "The cortico-striatal-thalamic loop is a neural circuit.",
+                "Elucidating how the cortico-striatal-thalamic loop functions is crucial.",
+                "Elucidating how the cortico-striatal-thalamic loop can go awry in OCD is crucial.",
+                "Researchers and clinicians can target specific areas for interventions based on how the neural circuits function.",
+                "Researchers and clinicians can target specific areas for interventions based on how the neural circuits can go awry in OCD.",
+                "Knowledge about the neural circuits can inform the development of pharmacological therapies.",
+                "Knowledge about the neural circuits can inform the development of behavioral therapies.",
+                "The pharmacological therapies aim to modulate neural activity.",
+                "The behavioral therapies aim to modulate neural activity.",
+                "The therapies aim to restore healthy functioning within the neural circuits."
+            ]
+        },
+        {
+            "sequence": 5,
+            "proposition": [
+                "The cortico-striatal-thalamic loop plays a critical role in the pathophysiology of OCD.",
+                "The cortico-striatal-thalamic loop sheds light on the neural mechanisms that underlie obsessions and compulsions.",
+                "Researchers are delving into the intricacies of the cortico-striatal-thalamic loop.",
+                "Researchers are advancing our understanding of OCD.",
+                "Researchers are paving the way for more targeted and individualized treatment approaches for individuals grappling with OCD."
+            ]
+        }
+    ]
+}

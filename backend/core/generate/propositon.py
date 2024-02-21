@@ -3,16 +3,12 @@ import sys
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
 sys.path.append(PROJECT_ROOT)
 import json
-from openai import OpenAI
 from utils.translate import toChinese
 from utils.path import *
-
-
-api_key = "sk-zk29795f32167f6443e112ce116990fe14f65d1947169cd3"
-base_url = "https://flag.smarttrot.com/v1/"
-client = OpenAI(api_key=api_key,base_url=base_url)  
+from utils.llm import chat
 
 # prompt出处：https://smith.langchain.com/hub/wfh/proposal-indexing?organizationId=97591f89-2916-48d3-804e-20cab23f91aa
+# 有论文
 systemPrompt = """
 Decompose the "Content" into clear and simple propositions, ensuring they are interpretable out of context.
 1. Split compound sentence into simple sentences. Maintain the original phrasing from the input whenever possible.
@@ -29,24 +25,19 @@ Output: [ "The earliest evidence for the Easter Hare was recorded in south-west 
 
 def generateProposition(paragraph):
 
-    template=f"""
+    template = f"""
         'Decompose the following:\n{paragraph}'
     """
-    resp = client.chat.completions.create(
-        model="gpt-3.5-turbo-0125", 
-        messages=[
-            {"role":"system", "content":systemPrompt},
-            {"role":"user", "content":template}
-        ]
-    )
-
-    content = resp.choices[0].message.content
+    messages = [
+        {"role":"system", "content":systemPrompt},
+        {"role":"user", "content":template}
+    ]
+    content = chat(messages=messages)
 
     # 返回的格式不是很准确，最后一个元素可能会多一个“,”不符合json数据格式
     try:
         return json.loads(content)
     except ValueError:
-        print(resp.choices[0].message.content)
         temp = content.rsplit(',',1)
         res = temp[0].join(temp[1])
         return res
@@ -85,9 +76,11 @@ def getArticle(articleFilePath):
 
 def main(theme, videoTitle):
     # 创建目录和目录下的空文件
-    prepare(theme=theme,videoTitle=videoTitle)
+    # prepare(theme=theme,videoTitle=videoTitle)
 
-    articleFilePathList = getArticleFilePathList(theme=theme,videoTitle=videoTitle)
+    removeList = []
+    articleFilePathList = getArticleFilePathList(theme=theme,videoTitle=videoTitle,removeList=removeList)
+
 
     for articleFilePath in articleFilePathList:
 
