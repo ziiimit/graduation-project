@@ -6,7 +6,7 @@ sys.path.append(os.path.dirname(SCRIPT_DIR))
 
 
 
-from utils.embeddings import generateEmbeddings
+from utils.embeddings import generateEmbedding
 from db.proposition import *
 
 
@@ -23,7 +23,7 @@ def generateArticlePropositionsVector(articleTitle):
         if(hasEmbedding(proposition)):
             continue
 
-        proposition['embedding'] = generateEmbeddings(proposition["content"])
+        proposition['embedding'] = generateEmbedding(proposition["content"])
         result.append(proposition)
         
     setPropositionsEmbedding(result)

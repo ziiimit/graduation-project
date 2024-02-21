@@ -5,7 +5,7 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 print(SCRIPT_DIR)
 sys.path.append(os.path.dirname(SCRIPT_DIR))
 
-from utils.embeddings import generateEmbeddings
+from utils.embeddings import generateEmbedding
 from utils.translate import toChinese 
 
 
@@ -47,7 +47,7 @@ def generateResponse(corpus,userInput_en):
 def query(userInput_en):
 
     # 找到数据库中和用户输入的cosine-similarity值最大的前5个proposition 
-    queryEmbedding = generateEmbeddings(userInput_en)
+    queryEmbedding = generateEmbedding(userInput_en)
     similarPropositions = findSimilarPropositions(queryEmbedding=queryEmbedding, num=5)
 
     # 获取proposition对应的paragraph，用于传入llm生成对用户的回答

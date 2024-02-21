@@ -10,8 +10,7 @@ model = AutoModel.from_pretrained("princeton-nlp/sup-simcse-roberta-large")
 
 
 
-
-def generateEmbeddings(target):
+def generateEmbedding(target):
     inputs = tokenizer([target], padding=True, truncation=True, return_tensors="pt")
     with torch.no_grad():
         embeddings = model(**inputs, output_hidden_states=True, return_dict=True).pooler_output  
