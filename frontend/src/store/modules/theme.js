@@ -1,19 +1,19 @@
 const state = {
     themes: [
         {
-            themeName_zh: '心理健康与成瘾',
-            themeName_en: "Mental Health and Addiction",
-            colorTheme: "theme0"
+            title_zh: '心理健康与成瘾',
+            title_en: "Mental Health and Addiction",
+            themeColor: "theme0"
         },
         {
-            themeName_zh: '专注力，效率与创造力',
-            themeName_en: "Focus, Productivity and Creativity",
-            colorTheme: "theme1"
+            title_zh: '专注力，效率与创造力',
+            title_en: "Focus, Productivity and Creativity",
+            themeColor: "theme1"
         },
         {
-            themeName_zh: '健康生活的科学',
-            themeName_en: "The Science of Well-being",
-            colorTheme: "theme2"
+            title_zh: '健康生活的科学',
+            title_en: "The Science of Well-being",
+            themeColor: "theme2"
         }
     ],
 }

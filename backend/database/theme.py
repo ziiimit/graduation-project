@@ -19,7 +19,7 @@ theme = [
      },
      {
         'title_en':"Focus, Productivity and Creativity",
-        'title_zh':"专注，效率与创造力"
+        'title_zh':"专注力，效率与创造力"
      },
      {
         'title_en':"Mental Health and Addiction",

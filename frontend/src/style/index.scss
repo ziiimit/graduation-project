@@ -1,12 +1,27 @@
+@import "@/style/color.scss";
+
+
 *,
 *::after,
 *::before {
 	box-sizing: border-box;
+    color: $app-basicFont;
+}
+
+*{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+    display: none;
+    }
 }
 
 html {
-	background: #f0efee;  // the same as $article-bg
+	background: $app-bg; 
+
 }
+
+
 
 body {
 	font-family: 'Source Sans Pro', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -14,8 +29,14 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
     transition: opacity 0.5s;
-    background: #f0efee; 
+    background: $app-bg; 
+
+
 }
+
+
+
+
 
 button{
     cursor: pointer;

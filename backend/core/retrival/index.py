@@ -44,7 +44,7 @@ def main(query):
         "response_zh":response_zh
     }
 
-print(main("我经常睡觉前不刷牙，这对牙齿有什么危害么"))
+# print(main("我经常睡觉前不刷牙，这对牙齿有什么危害么"))
 
 
 
