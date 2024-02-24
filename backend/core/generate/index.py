@@ -1,41 +1,46 @@
 from transcript import main as transcript_main
 from intro_article import main as intro_article_main
 from propositon import main as proposition_main
+from summary import main as summary_main
 
 
+from utils.dataDirReadandWrite import readMetaByIndex,writeMetaVideoTitle
+from utils.path import *
 from db.index import *
 
+def prepareDir(theme,videoTitle):
+    # 父文件夹不存在则创建，存在则remain unaltered
+    path_articleDir = getArticleDirPath(theme=theme, videoTitle=videoTitle)
+    path_propositionDir = getPropositionDirPath(theme=theme,videoTitle=videoTitle)
+    os.makedirs(path_articleDir, exist_ok=True) 
+    os.makedirs(path_propositionDir, exist_ok=True) 
+    
 
-def main(current):
+
+def main(index):
 
     # 当前正在处理的视频
-    path_meta = "/Users/huangshihui/Downloads/graduation-project/backend/data/meta.json"
-    f = open(path_meta, 'r')
-    meta = json.load(f)[current]
+    meta = readMetaByIndex(index)
     videoURL = meta['videoURL']
     theme = meta['theme']
 
-
-    # 获取transcripts并处理，存储至项目文件夹下
+    # 获取transcripts并存储至项目文件夹下，将videoTitle添加到meta中
     # videoTitle = transcript_main(videoURL=videoURL,theme=theme)
-    # print(videoTitle)
+    # writeMetaVideoTitle(index=index,videoTitle=videoTitle)
+    videoTitle = readMetaByIndex(index=index)['videoTitle']
 
-    videoTitle = "How to Increase Motivation & Drive"
+    # 创建article和proposition的文件夹，transcript和summary由于是一个文件涵盖全部，不存在文件夹
+    prepareDir(theme=theme,videoTitle=videoTitle)
 
-    # 生成intro&article
     # intro_article_main(theme=theme,videoTitle=videoTitle)
-
-    # 在数据库内创建ArticleSet
     # storeArticleSet(sourceVideoURL=videoURL,videoTitle=videoTitle,theme=theme)
-
-    # 在数据库内创建Article和Paragraph
-    # storeArticle_storePararaph(sourceVideoURL=videoURL,videoTitle=videoTitle,theme=theme)
+    # storeArticle_storePararaph(videoTitle=videoTitle,theme=theme)
     
-    # 生成proposition
     # proposition_main(theme=theme,videoTitle=videoTitle)
+    # storeProposition_generateEmbedding(videoTitle=videoTitle,theme=theme)
 
-    # 存储proposition, 并生成和存储embedding
-    storeProposition_generateEmbedding(sourceVideoURL=videoURL,videoTitle=videoTitle,theme=theme)
+    # summary_main(theme=theme,videoTitle=videoTitle)
+    # storeSummary(theme=theme,videoTitle=videoTitle)
 
     
 main(2)

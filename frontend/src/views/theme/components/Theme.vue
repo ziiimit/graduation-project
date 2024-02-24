@@ -1,5 +1,3 @@
-
-
 <template>
     <div id="theme" :class="[theme['themeColor']]">
         <div id="top-bar">
@@ -57,12 +55,13 @@ export default {
 }
 </script>
 <style scoped lang='scss'>
-@import "@/style/color.scss";
+@import "@/style/variable.scss";
 @import "@/style/transition.scss";
+$top-bar: 50px;
 
 #theme {
     height: 100vh;
-    padding: 100px clamp(1.5rem, 6vw, 4rem) 0;
+    padding: $top-bar clamp(1.5rem, 6vw, 4rem) 0 clamp(1.5rem, 10vw, 8rem);
 }
 
 #top-bar {
@@ -71,7 +70,7 @@ export default {
     left: 0;
     z-index: 100;
     width: 100%;
-    height: 100px;
+    height: $top-bar;
 }
 
 
@@ -82,8 +81,6 @@ export default {
     width: 100%;
     height: 100vh;
 }
-
-
 
 
 .title-zh {
@@ -110,7 +107,7 @@ export default {
 }
 
 
-
+// ASList上下的渐变过渡
 #theme:after,
 .title:after {
     display: block;
@@ -124,6 +121,7 @@ export default {
 }
 
 #theme:after {
+    height: 100px;
     bottom: 0;
     background: linear-gradient(to top, $app-bg, $app-bg 50%, rgba($app-bg, 0));
 }

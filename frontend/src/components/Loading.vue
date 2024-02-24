@@ -1,15 +1,31 @@
 <template>
-    <div id="loading" :class="[theme['themeColor']]"></div>
+    <div id="loading" :class="[themeColor]"></div>
 </template>
   
 <script>
 export default {
-    props: ['theme']
+    props: ['theme', 'themeTitle_en'],
+    data() {
+        return {
+            themeColor: null
+        }
+    },
+    created() {
+        if (this.theme) {
+            this.themeColor = theme['themeColor']
+        }
+        if (this.themeTitle_en) {
+            for (let theme of this.$store.state.theme.themes) {
+                if (theme['title_en'] == this.themeTitle_en) this.themecolor = theme['themeColor']
+            }
+        }
+    }
+
 };
 </script>
   
 <style scoped lang="scss">
-@import "@/style/color.scss";
+@import "@/style/variable.scss";
 
 #loading {
     display: flex;

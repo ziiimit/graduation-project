@@ -16,3 +16,24 @@ def chat(messages,model="gpt-3.5-turbo-0125"):
     )
 
     return resp.choices[0].message.content
+
+
+def translate_toChinese(text):
+
+    messages = [
+        {"role":"system", "content":"You will be provided with a piece of text in English, and your task is to translate it into Chinese."},
+        {"role":"user", "content":f"Text:\n{text}"}
+    ]
+
+    return chat(messages=messages)
+
+
+
+def translate_toEnglish(text):
+
+    messages = [
+        {"role":"system", "content":"You will be provided with a piece of text in Chinese, and your task is to translate it into English."},
+        {"role":"user", "content":f"Text:\n{text}"}
+    ]
+
+    return chat(messages=messages)

@@ -30,7 +30,7 @@ def addPropositionVectorIndex():
 
 
 # 创建Article的Proposition, 生成embeddings并存储
-def createPropositonForParagraph(sourceVideoURL,articleSequence,paragraphSequence,propositionList):
+def createPropositonForParagraph(videoTitle,articleSequence,paragraphSequence,propositionList):
 
     with GraphDatabase.driver(URI, auth=AUTH) as driver:
         driver.verify_connectivity()
@@ -39,10 +39,10 @@ def createPropositonForParagraph(sourceVideoURL,articleSequence,paragraphSequenc
             for proposition in propositionList:
                 embedding = generateEmbedding(proposition)
                 session.run("""
-                    MATCH (:ArticleSet {sourceVideoURL:$sourceVideoURL})-[:HAS]->(:Article {sequence:$articleSequence})-[:CONSTRUCTED_BY]->(p:Paragraph {sequence:$paragraphSequence})
+                    MATCH (:ArticleSet {videoTitle:$videoTitle})-[:HAS]->(:Article {sequence:$articleSequence})-[:CONSTRUCTED_BY]->(p:Paragraph {sequence:$paragraphSequence})
                     CREATE (prop:Proposition {text:$text})-[:GENERATED_FROM]->(p)
                     WITH prop
                     CALL db.create.setNodeVectorProperty(prop, 'embedding', $vector)
-                """, sourceVideoURL=sourceVideoURL, articleSequence=articleSequence, paragraphSequence=paragraphSequence,text=proposition,vector=embedding)
+                """, videoTitle=videoTitle, articleSequence=articleSequence, paragraphSequence=paragraphSequence,text=proposition,vector=embedding)
 
 

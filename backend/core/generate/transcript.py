@@ -179,7 +179,7 @@ def main(videoURL,theme):
 
     # 存储到文件中
     fileContent = {
-        'metadata':{
+        'meta':{
             'videoURL':videoURL,
             'videoTitle':videoTitle,
             'theme':theme

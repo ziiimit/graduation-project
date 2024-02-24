@@ -1,14 +1,17 @@
 [
     {
         "videoURL": "https://www.youtube.com/watch?v=zVCaYyUWWSw",
-        "theme": "The Science of Well-being"
+        "theme": "The Science of Well-being",
+        "videoTitle": "How to Improve Oral Health & Its Critical Role in Brain & Body Health"
     },
     {
         "videoURL": "https://www.youtube.com/watch?v=OadokY8fcAA",
-        "theme": "Mental Health and Addiction"
+        "theme": "Mental Health and Addiction",
+        "videoTitle": "The Science & Treatment of Obsessive Compulsive Disorder (OCD)"
     },
     {
         "videoURL": "https://www.youtube.com/watch?v=vA50EK70whE",
-        "theme": "Focus, Productivity and Creativity"
+        "theme": "Focus, Productivity and Creativity",
+        "videoTitle": "How to Increase Motivation & Drive"
     }
 ]

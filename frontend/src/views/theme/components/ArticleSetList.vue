@@ -32,27 +32,48 @@ export default {
     },
     methods: {
         showIntro(index) {
-            document.querySelector(`li:nth-child(${index + 1})`).style.transition = "padding-bottom 0.2s"
+            // UI操作流畅度考虑:
+            let currentItem = document.querySelector(`li:nth-child(${index + 1})`)
+            // @ts-ignore
+            currentItem.style.transition = "padding-bottom 0.2s"
+            // @ts-ignore
             this.introVisible = [];
+            // @ts-ignore
             this.introVisible[index] = true;
         },
         hideIntro(index) {
             if (this.introChosen == index) return
-            document.querySelector(`li:nth-child(${index + 1})`).style.transition = "padding-bottom 0s"
+            // UI操作流畅度考虑:
+            let currentItem = document.querySelector(`li:nth-child(${index + 1})`)
+            // @ts-ignore
+            currentItem.style.transition = "padding-bottom 0s"
             this.introVisible = [];
         },
         choose(index) {
             this.introChosen = index;
             console.log(index)
+            console.log(this.articleSetList[index]['title_en'])
+            this.$router.push({
+                name: "ArticleSet", params: {
+                    articleSetTitle_en: this.articleSetList[index]['title_en'],
+                    themeTitle_en: this.theme['title_en']
+                }
+            })
         }
     },
     created() {
         let themeTitle_en = this.theme['title_en'];
         getArticleSetList(themeTitle_en).then((res) => {
             this.articleSetList = res;
+            // @ts-ignore
             this.articleSetList[1] = res[0];
+            // @ts-ignore
             this.articleSetList[2] = res[0];
+            // @ts-ignore
+            this.articleSetList[3] = res[0];
             this.$emit("dataLoaded")
+            // @ts-ignore
+            // @ts-ignore
         }).catch(err => {
 
         })
@@ -60,11 +81,11 @@ export default {
 }
 </script>
 <style scoped lang='scss'>
-@import "@/style/color.scss";
+@import "@/style/variable.scss";
 @import "@/style/transition.scss";
 
 #article-set-list {
-    height: calc(100vh - 230px);
+    height: calc(100vh - 222px);
     overflow: scroll;
     padding-top: 60px;
     position: relative;
@@ -74,8 +95,8 @@ ul {
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    padding: 20px 20px 50px;
     padding-left: 10vw;
+    padding-bottom: 250px; //让最后一个元素不要太贴着列表底部，不然操作体验感不好
     gap: 100px;
     max-width: 1500px;
     flex-direction: column;
@@ -89,7 +110,7 @@ li {
     display: inline;
 
     &.active {
-        padding-bottom: 220px;
+        padding-bottom: 210px;
     }
 }
 

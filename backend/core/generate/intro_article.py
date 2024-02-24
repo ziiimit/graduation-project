@@ -3,9 +3,10 @@ import sys
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
 sys.path.append(PROJECT_ROOT)
 import json
-from utils.translate import toChinese
 from utils.path import *
+from backend.utils.dataDirReadandWrite import readTranscript
 from utils.llm import chat
+from utils.llm import translate_toChinese
 
 # 生成intro, 原视频的制作风格，即先进行整个视频内容的简要介绍，本身不包含任何实质内容，对应了segments[0]
 # 可以利用起来，转换为网站每一个文章series的intro
@@ -49,7 +50,7 @@ def generateArticle(text,segmentTitle):
     """
     messages=[
         {"role":"system", "content":"Your job is to write an essay based on the given text around the given topic"},
-        {"role":"system", "content":"Preserve the explantory context, make sure the essay is detailed"},
+        {"role":"system", "content":"Preserve the explantory context, make sure the essay is detailed and can be understood by a high school student"},
         {"role":"system", "content":"Don't make up information that is not mentioned"},
         {"role":"system", "content":"Don't provide title, response should only contain paragraphs"},
         {"role":"user", "content":template}
@@ -60,7 +61,7 @@ def generateArticle(text,segmentTitle):
         res.append({
             'sequence': i,
             'text_en':list[i],
-            'text_zh':toChinese(list[i])
+            'text_zh':translate_toChinese(list[i])
         })
 
     return res
@@ -69,18 +70,10 @@ def generateArticle(text,segmentTitle):
 
 def main(theme,videoTitle):
 
-    # 父文件夹不存在则创建，存在则remain unaltered
-    path_articleDir = getArticleDirPath(theme=theme, videoTitle=videoTitle)
-    os.makedirs(path_articleDir, exist_ok=True) 
-
     # 获取transcript的segments
-    path_transcript = getTranscriptFilePath(theme=theme,videoTitle=videoTitle)
-    with open(path_transcript,'r',encoding='utf-8') as f:
+    segments = readTranscript(theme=theme,videoTitle=videoTitle)['transcriptSegments']
 
-        segments = json.load(f)['transcriptSegments']
-
-        for i in range(len(segments)):
-            
+    for i in range(len(segments)):
             
             text = segments[i]['text']
             segmentTitle = segments[i]['segmentTitle']
@@ -92,13 +85,13 @@ def main(theme,videoTitle):
                 intro = generateIntro(text=filteredText,segmentTitle=segmentTitle,videoTitle=videoTitle)
                 
                 fileContent = {
-                    "metadata":{
+                    "meta":{
                         'type':'intro',
                         'theme':theme,
                         'videoTitle':videoTitle,
                     },
                     'text_en':intro,
-                    "text_zh":toChinese(intro)
+                    "text_zh":translate_toChinese(intro)
                 }
                 path_intro = getIntroFilePath(theme=theme,videoTitle=videoTitle)
                 with open(path_intro,'w',encoding='utf-8') as f:
@@ -107,14 +100,14 @@ def main(theme,videoTitle):
             else:
                 # 生成文章
                 fileContent = {
-                    "metadata":{
+                    "meta":{
                         'type':'article',
                         'theme':theme,
                         'videoTitle':videoTitle,
                         'articleSequence':i-1
                     },
                     'title_en':segmentTitle,
-                    'title_zh':toChinese(segmentTitle),
+                    'title_zh':translate_toChinese(segmentTitle),
                     'paragraphList':generateArticle(text=text,segmentTitle=segmentTitle)
                 }
                 path_article = getArticleFilePath(theme=theme,videoTitle=videoTitle,fileIndex=i-1)

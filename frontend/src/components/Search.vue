@@ -93,7 +93,7 @@ export default {
 }
 </script>
 <style scoped lang='scss'>
-@import "@/style/color.scss";
+@import "@/style/variable.scss";
 
 
 #search {

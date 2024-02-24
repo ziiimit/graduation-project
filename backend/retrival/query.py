@@ -6,7 +6,7 @@ print(SCRIPT_DIR)
 sys.path.append(os.path.dirname(SCRIPT_DIR))
 
 from utils.embeddings import generateEmbedding
-from utils.translate import toChinese 
+from utils.llm import translate_toChinese 
 
 
 from db.proposition import findSimilarPropositions,getCorrespondingParagraph
@@ -40,7 +40,7 @@ def generateResponse(corpus,userInput_en):
 
    response_en = chain.invoke({'corpus':corpus,'userInput_en':userInput_en})
    print(response_en)
-   response_zh = toChinese(queryString=response_en)
+   response_zh = translate_toChinese(queryString=response_en)
    return response_zh
 
 

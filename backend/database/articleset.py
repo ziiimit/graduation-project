@@ -32,4 +32,19 @@ def getArticleSetList(themeTitle_en):
             return res.data()
 
 
-# print(getArticleSetList("Mental Health and Addiction"))
+# 找到某个article set的article列表
+def getArticleSet(articleSetTitle_en):
+
+    with GraphDatabase.driver(URI, auth=AUTH) as driver:
+        driver.verify_connectivity()
+        with driver.session(database="neo4j") as session:
+
+            res = session.run("""
+                MATCH (as:ArticleSet {title_en:$articleSetTitle_en})-[:HAS]->(a:Article)
+                RETURN a.title_en as title_en,a.title_zh as title_zh,a.summary_en as summary_en,a.summary_zh as summary_zh,as.title_zh as articleSetTitle_zh
+                ORDER BY a.sequence
+            """,articleSetTitle_en=articleSetTitle_en)
+
+            return res.data()
+        
+

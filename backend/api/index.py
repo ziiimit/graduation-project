@@ -3,8 +3,9 @@ import sys
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 
 
-from database.articleset import getArticleSetList
-from utils.translate import toEnglish
+from database.articleset import getArticleSetList,getArticleSet
+from database.article import getArticle
+from utils.llm import translate_toEnglish
 
 
 from flask import Flask
@@ -26,43 +27,25 @@ def articleSetList():
 
     return res
 
+# 获取某个ArticleSet的Article列表
+@app.get("/articleSet")
+def articleSet():
 
-# # 获取某个ArticleSet的信息，包括所属theme、标题、包含的所有文章的标题列表
-# @app.get("/themeArticleSet/articleSet")
-# def getArticleSet():
+    articleSetTitle_en = request.args.get('articleSetTitle_en')
+    res = getArticleSet(articleSetTitle_en=articleSetTitle_en)
 
-#     articleSetTitle = request.args.get('title')
-#     # 获取as对应的theme
-#     theme = getAeticleSetTheme(articleSetTitle=articleSetTitle)
-#     themeName = theme['name']
-#     # 获取as的所有文章标题
-#     articles = getAllArticle(articleSetTitle=articleSetTitle)
-
-#     return {
-#         'theme':themeName,
-#         'title':articleSetTitle,
-#         "articles":articles
-#     }
-
-# # 获取某个文章的具体内容
-# @app.get("/themeArticleSet/article")
-# def getArticle():
-
-#     articleTitle = request.args.get('title')
-#     articleID = int(request.args.get('id'))
-#     paragraphs = getParagraphList(articleID)
-#     return {
-#         'title':articleTitle,
-#         "paragraphs":paragraphs
-#     }
+    return res
 
 
-# # 处理用户的搜索，返回回复&推荐的文章列表
-# @app.get("/search")
-# def getSearchResult():
 
-#     userInput = request.args.get('userInput')
-#     userInput_en = toEnglish(userInput)
-    
-#     return query(userInput_en)
+# 获取某个Article
+@app.get("/article")
+def article():
+
+    articleSetTitle_en = request.args.get('articleSetTitle_en')
+    articleSequence = request.args.get('articleSequence')
+    res = getArticle(articleSetTitle_en=articleSetTitle_en,articleSequence=articleSequence)
+
+    return res
+
 

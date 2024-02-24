@@ -28,7 +28,7 @@ export default {
 }
 </script>
 <style scoped lang='scss'>
-@import "@/style/color.scss";
+@import "@/style/variable.scss";
 
 #theme-list {
     transition: opacity 0.2s;

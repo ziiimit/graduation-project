@@ -3,9 +3,10 @@ import sys
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
 sys.path.append(PROJECT_ROOT)
 import json
-from utils.translate import toChinese
 from utils.path import *
+from backend.utils.dataDirReadandWrite import readArticle
 from utils.llm import chat
+from utils.llm import translate_toChinese
 
 # prompt出处：https://smith.langchain.com/hub/wfh/proposal-indexing?organizationId=97591f89-2916-48d3-804e-20cab23f91aa
 # 有论文
@@ -44,59 +45,31 @@ def generateProposition(paragraph):
 
 
 
-def prepare(theme,videoTitle):
-    # 创建文件夹
-    path_propositionDir = getPropositionDirPath(theme=theme,videoTitle=videoTitle)
-    os.makedirs(path_propositionDir,exist_ok=True)
-    # 创建文件
-    for i in range(len(getArticleFilePathList(theme=theme,videoTitle=videoTitle))):
-        path = path_propositionDir + f'/article{i}.json'
-        f = open(path,'a',encoding='utf-8')
+def main(theme, videoTitle):
+
+    articleFilePathList = getArticleFilePathList(theme=theme,videoTitle=videoTitle)
+
+    for articleSequence in range(len(articleFilePathList)):
+
+        # 文件不存在则创建，存在则保持原状
+        path_propositionFile = getPropositionFilePath(theme=theme,videoTitle=videoTitle,articleSequence=articleSequence)
+        f = open(path_propositionFile,'a',encoding='utf-8')
         f.close()
 
-
-
-# 获取 article 数据
-def getArticle(articleFilePath):
-
-    with open(articleFilePath,'r',encoding='utf-8') as f:
-        # 获取article的元信息
-        article = json.load(f)
-        articleSequence = article['metadata']['articleSequence']
+        article = readArticle(theme=theme,videoTitle=videoTitle,articleSequence=articleSequence)
         paragraphList = article['paragraphList']
 
-        return {
-            'articleSequence':articleSequence,
-            "paragraphList":paragraphList
-        }
-
-
-
-
-
-def main(theme, videoTitle):
-    # 创建目录和目录下的空文件
-    # prepare(theme=theme,videoTitle=videoTitle)
-
-    removeList = []
-    articleFilePathList = getArticleFilePathList(theme=theme,videoTitle=videoTitle,removeList=removeList)
-
-
-    for articleFilePath in articleFilePathList:
-
-
-        article = getArticle(articleFilePath=articleFilePath)
-        articleSequence = article['articleSequence']
-        paragraphList = article['paragraphList']
 
         for paragraph in paragraphList:
+
+            # 获取数据
             paragraphProposition = {
                 'sequence':paragraph['sequence'],
                 'proposition':generateProposition(paragraph['text_en'])
             }
 
-            articlePropositionPath = PROJECT_ROOT + f'/data/generated_proposition/{theme}/{videoTitle}/article{articleSequence}.json'
-            with open(articlePropositionPath,'r+',encoding='utf-8') as f:
+            # 写入文件
+            with open(path_propositionFile,'r+',encoding='utf-8') as f:
                 try:
                     fileContent = json.load(f)
                     fileContent['paragraphList'].append(paragraphProposition)
@@ -107,7 +80,7 @@ def main(theme, videoTitle):
                     f.write(json.dumps(fileContent,indent=4))
                 except ValueError: # 空文件触发
                         fileContent = {
-                            'metadata':{
+                            'meta':{
                                 'theme':theme,
                                 'videoTitle':videoTitle,
                                 'articleSequence':articleSequence
