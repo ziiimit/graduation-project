@@ -1,7 +1,8 @@
 <template>
     <div id="theme-list">
         <ul>
-            <li v-for="theme in themeList" :class="[theme.themeColor]" @click="navigateToTheme(theme['title_en'])">
+            <li v-for="theme in themeList" :class="[getThemeColor(theme['title_en'])]"
+                @click="navigateToTheme(theme['title_en'])">
                 <div class="title">
                     <div class="title-zh">{{ theme['title_zh'] }}</div>
                     <div class="title-en">{{ theme['title_en'] }}</div>
@@ -15,13 +16,15 @@ export default {
     name: "ThemeList",
     data() {
         return {
-            // @ts-ignore
             themeList: this.$store.state.theme.themes,
         }
     },
     methods: {
-        navigateToTheme(title_en) {
-            this.$emit("navigate", title_en)
+        getThemeColor(themeTitle_en) {
+            return this.$store.state.theme.themeColors[themeTitle_en]
+        },
+        navigateToTheme(themeTitle_en) {
+            this.$router.push({ name: 'Theme', params: { themeTitle_en } })
         },
     }
 
@@ -35,7 +38,6 @@ export default {
 }
 
 ul {
-    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;

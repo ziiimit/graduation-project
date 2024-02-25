@@ -1,8 +1,8 @@
 <template>
-    <div id="article-set-list" :class="[theme['themeColor']]">
+    <div id="article-set-list">
         <ul>
             <li v-for="(articleSet, index) in articleSetList" :class="{ 'active': introVisible[index] }"
-                @mouseenter="showIntro(index)" @mouseleave="hideIntro(index)" @click="choose(index)">
+                @mouseenter="showIntro(index)" @mouseleave="hideIntro(index)" @click="navigateToArticleSet(index)">
                 <div class="title">
                     <div class="title_zh">{{ articleSet['title_zh'] }}</div>
                     <div class="title_en">{{ articleSet['title_en'] }}</div>
@@ -18,11 +18,10 @@
     </div>
 </template>
 <script>
-// @ts-ignore
 import { getArticleSetList } from "@/api/articleset";
 export default {
     name: "ArticleSetList",
-    props: ['theme'],
+    props: ['themeTitle_en'],
     data() {
         return {
             articleSetList: null,
@@ -30,50 +29,41 @@ export default {
             introChosen: null,
         }
     },
+
     methods: {
         showIntro(index) {
             // UI操作流畅度考虑:
             let currentItem = document.querySelector(`li:nth-child(${index + 1})`)
-            // @ts-ignore
             currentItem.style.transition = "padding-bottom 0.2s"
-            // @ts-ignore
             this.introVisible = [];
-            // @ts-ignore
             this.introVisible[index] = true;
         },
         hideIntro(index) {
             if (this.introChosen == index) return
             // UI操作流畅度考虑:
             let currentItem = document.querySelector(`li:nth-child(${index + 1})`)
-            // @ts-ignore
             currentItem.style.transition = "padding-bottom 0s"
             this.introVisible = [];
         },
-        choose(index) {
+        navigateToArticleSet(index) {
             this.introChosen = index;
-            console.log(index)
-            console.log(this.articleSetList[index]['title_en'])
             this.$router.push({
-                name: "ArticleSet", params: {
-                    articleSetTitle_en: this.articleSetList[index]['title_en'],
-                    themeTitle_en: this.theme['title_en']
+                name: "ArticleSet",
+                params:
+                {
+                    themeTitle_en: this.themeTitle_en,
+                    articleSetTitle_en: this.articleSetList[index]['title_en']
                 }
             })
         }
     },
     created() {
-        let themeTitle_en = this.theme['title_en'];
-        getArticleSetList(themeTitle_en).then((res) => {
+        getArticleSetList(this.themeTitle_en).then((res) => {
             this.articleSetList = res;
-            // @ts-ignore
             this.articleSetList[1] = res[0];
-            // @ts-ignore
             this.articleSetList[2] = res[0];
-            // @ts-ignore
             this.articleSetList[3] = res[0];
             this.$emit("dataLoaded")
-            // @ts-ignore
-            // @ts-ignore
         }).catch(err => {
 
         })

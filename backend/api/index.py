@@ -5,7 +5,7 @@ sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 
 from database.articleset import getArticleSetList,getArticleSet
 from database.article import getArticle
-from utils.llm import translate_toEnglish
+from core.retrival.index import main as retrival_main
 
 
 from flask import Flask
@@ -45,6 +45,15 @@ def article():
     articleSetTitle_en = request.args.get('articleSetTitle_en')
     articleSequence = request.args.get('articleSequence')
     res = getArticle(articleSetTitle_en=articleSetTitle_en,articleSequence=articleSequence)
+
+    return res
+
+# 获取某个Article
+@app.get("/search")
+def search():
+
+    userInput_zh = request.args.get('userInput_zh')
+    res = retrival_main(query_zh=userInput_zh)
 
     return res
 

@@ -1,11 +1,8 @@
 <template>
     <div id="article-set" :class="[themeColor]">
-
-        <Loading v-if="loadingVisible" :articleSetTitle_en="articleSetTitle_en" />
+        <Loading v-if="loadingVisible" />
         <div v-else>
-            <div id="top-bar">
-                <HomeBtn />
-            </div>
+            <HomeBtn />
             <header>
                 <div class="theme" :class="{ active: themeTitleActive }" @mouseover="() => themeTitleActive = true"
                     @mouseleave="() => themeTitleActive = false" @click="navigateToTheme">
@@ -38,52 +35,34 @@ export default {
             themeTitleActive: false
         }
     },
+    computed: {
+        themeColor() {
+            return this.$store.state.theme.themeColors[this.themeTitle_en]
+        },
+        themeTitle_zh() {
+            for (let theme of this.$store.state.theme.themes) {
+                if (theme['title_en'] == this.themeTitle_en) return theme['title_zh']
+            }
+        },
+    },
     methods: {
         handleDataLoaded(articleSetTitle_zh) {
             this.articleSetTitle_zh = articleSetTitle_zh;
             this.loadingVisible = false;
         },
         navigateToTheme() {
-            let routeName
-            switch (this.themeTitle_en) {
-                case "Mental Health and Addiction":
-                    routeName = "Theme_MentalHealthAndAddiction"
-                    break;
-                case "Focus, Productivity and Creativity":
-                    routeName = "Theme_FocusProductivityAndCreativity"
-                    break;
-                case "The Science of Well-being":
-                    routeName = "Theme_TheScienceOfWellBeing";
-                    break;
-            }
-            this.$router.push({ name: routeName })
+            this.$router.push({
+                name: 'Theme', params: {
+                    themeTitle_en: this.themeTitle_en
+                }
+            })
         }
     },
-    computed: {
-        themeTitle_zh() {
-            for (let theme of this.$store.state.theme.themes) {
-                if (theme['title_en'] == this.themeTitle_en) return theme['title_zh']
-            }
-        },
-        themeColor() {
-            for (let theme of this.$store.state.theme.themes) {
-                if (theme['title_en'] == this.themeTitle_en) return theme['themeColor']
-            }
-        },
-    },
-
 }
 </script>
 <style scoped lang='scss'>
 @import "@/style/variable.scss";
 
-#loading {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-}
 
 #article-set {
     padding: 20px clamp(1.5rem, 6vw, 4rem) 0 clamp(1.5rem, 10vw, 8rem);

@@ -12,7 +12,7 @@ export default {
     name: "HomeBtn",
     methods: {
         navigateToHome() {
-            this.$router.push({ name: "ThemeList" })
+            this.$router.push({ name: "Home" })
         }
     }
 }

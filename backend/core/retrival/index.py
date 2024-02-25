@@ -24,10 +24,10 @@ def generateResponse(query_en,paragraphList):
 
 
 
-def main(query):
+def main(query_zh):
 
     # 将query转化为英文（据说chat在英文上有优化，就转成英文，最后将答复转成中文）
-    query_en = translate_toEnglish(query)
+    query_en = translate_toEnglish(query_zh)
 
     # 获取数据库中与query相关度大于等于relevanceRate的前upperLimit个Proposition所对应的Paragraph，
     # 及其所属的Article标题、ArticleSet标题、Theme标题
@@ -35,9 +35,14 @@ def main(query):
     upperLimit = 10
     relevantParagraphList = getRelevantParagraphList(query_en=query_en,relevanceRate=relevanceRate,upperLimit=upperLimit)
     # 生成回复
+    if len(relevantParagraphList) == 0:
+        return{
+        "paragraphList": [],
+        "response_en":"Sorry, it seems like we can't find relevant article to your input",
+        "response_zh":"app暂时无法找到相关文章以回复"
+        }
     response_en = generateResponse(query_en=query_en, paragraphList=relevantParagraphList)
     response_zh = translate_toChinese(response_en)
-
     return {
         "paragraphList": relevantParagraphList,
         "response_en":response_en,

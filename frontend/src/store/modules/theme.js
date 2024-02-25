@@ -3,21 +3,23 @@ const state = {
         {
             title_zh: '心理健康与成瘾',
             title_en: "Mental Health and Addiction",
-            themeColor: "theme0"
         },
         {
             title_zh: '专注力，效率与创造力',
             title_en: "Focus, Productivity and Creativity",
-            themeColor: "theme1"
         },
         {
             title_zh: '健康生活的科学',
             title_en: "The Science of Well-being",
-            themeColor: "theme2"
         }
     ],
-}
+    themeColors: {
+        "Mental Health and Addiction": "theme0",
+        "Focus, Productivity and Creativity": "theme1",
+        "The Science of Well-being": "theme2",
+    }
 
+}
 
 
 export default {

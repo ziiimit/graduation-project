@@ -1,7 +1,9 @@
 import axios from 'axios';
 
-// params = {userInput_zh}
-export function getSearchResult(params) {
+export function getSearchResult(userInput_zh) {
+    const params = {
+        userInput_zh
+    }
     return new Promise((resolve, reject) => {
         axios.get('/search', {
             params
