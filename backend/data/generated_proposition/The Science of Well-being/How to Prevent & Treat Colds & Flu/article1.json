@@ -1,0 +1,59 @@
+{
+    "meta": {
+        "theme": "The Science of Well-being",
+        "videoTitle": "How to Prevent & Treat Colds & Flu",
+        "articleSequence": 1
+    },
+    "paragraphList": [
+        {
+            "sequence": 0,
+            "proposition": [
+                "The common cold is caused by various types of cold viruses known as serotypes.",
+                "Cold viruses are known as serotypes.",
+                "The common cold can present a range of symptoms.",
+                "Different individuals may experience varying degrees of severity in symptoms.",
+                "Symptoms of the common cold include a runny nose, stuffy head, and even a fever.",
+                "Individuals typically develop symptoms one to two days after being exposed to the cold virus.",
+                "Not everyone who is exposed to the cold virus will necessarily become infected.",
+                "The immune system plays a crucial role in fighting off the virus.",
+                "Exposure to the cold virus does not equate to catching a cold.",
+                "Strengthening the immune system through scientifically supported methods can significantly decrease the likelihood of falling ill.",
+                "Strengthening the immune system can decrease the likelihood of falling ill even when encountering a new serotype of the cold virus."
+            ]
+        },
+        {
+            "sequence": 1,
+            "proposition": [
+                "Individuals are most infectious to others when they are experiencing the peak of their symptoms, including coughing, sneezing, and general discomfort.",
+                "It is possible to spread the virus even as symptoms begin to alleviate.",
+                "Studies indicate that around five to six days after reaching the peak of symptoms, the contagious phase typically diminishes.",
+                "If symptoms persist, particularly sneezing and coughing, or if there is a worsening of symptoms, it is essential to continue taking precautions as the risk of spreading the virus remains."
+            ]
+        },
+        {
+            "sequence": 2,
+            "proposition": [
+                "Dispelling the myth that individuals are no longer contagious after a few days of having a cold is crucial.",
+                "Individuals are no longer contagious after a few days of having a cold.",
+                "It is crucial to dispel the myth about the contagious period of individuals with colds.",
+                "Contrary to popular belief, even when symptoms start to improve, one can still be contagious if signs of the cold persist.",
+                "Symptoms start to improve even when one is still contagious.",
+                "One can still be contagious if signs of the cold persist.",
+                "It is imperative for those experiencing a cold to stay at home and minimize contact with others whenever possible.",
+                "Those experiencing a cold should stay at home and minimize contact with others.",
+                "A proactive approach aids in preventing the spread of the virus and reducing the economic, mental, and physical burdens associated with cold infections.",
+                "A proactive approach helps in reducing the economic, mental, and physical burdens associated with cold infections.",
+                "It is imperative for individuals with colds to stay at home and minimize contact with others, especially in shared environments like workplaces, gyms, and households."
+            ]
+        },
+        {
+            "sequence": 3,
+            "proposition": [
+                "Promoting awareness of the contagious nature of cold viruses can help individuals contribute to creating healthier environments and mitigating risks associated with the common cold.",
+                "Encouraging responsible behavior when symptomatic can help individuals contribute to creating healthier environments and mitigating risks associated with the common cold.",
+                "Educating the public about the importance of staying home when sick can lead to a significant reduction in the transmission of cold viruses and ultimately benefit the overall well-being of communities.",
+                "The education about the importance of staying home when sick is regardless of the duration of the illness."
+            ]
+        }
+    ]
+}

@@ -1,0 +1,42 @@
+{
+    "meta": {
+        "type": "article",
+        "theme": "Mental Health and Addiction",
+        "videoTitle": "Tools for Managing Stress & Anxiety",
+        "articleSequence": 24
+    },
+    "title_en": "Long Term Stress: Definition, Measurement, Cardiovascular Risks",
+    "title_zh": "\u957f\u671f\u538b\u529b\uff1a\u5b9a\u4e49\u3001\u8861\u91cf\u3001\u5fc3\u8840\u7ba1\u98ce\u9669",
+    "paragraphList": [
+        {
+            "sequence": 0,
+            "text_en": "Long-term stress is a prevalent issue that many individuals face in today's fast-paced world. It can have significant impacts on one's health, especially on the cardiovascular system. Understanding the definition of long-term stress, how it is measured, and its associated cardiovascular risks is crucial in effectively managing this condition.",
+            "text_zh": "\u957f\u671f\u538b\u529b\u662f\u5f53\u4eca\u5feb\u8282\u594f\u4e16\u754c\u4e2d\u8bb8\u591a\u4eba\u9762\u4e34\u7684\u666e\u904d\u95ee\u9898\u3002\u5b83\u5bf9\u5065\u5eb7\u6709\u7740\u663e\u8457\u5f71\u54cd\uff0c\u5c24\u5176\u662f\u5bf9\u5fc3\u8840\u7ba1\u7cfb\u7edf\u3002\u4e86\u89e3\u957f\u671f\u538b\u529b\u7684\u5b9a\u4e49\u3001\u5982\u4f55\u8861\u91cf\u4ee5\u53ca\u5176\u76f8\u5173\u7684\u5fc3\u8840\u7ba1\u98ce\u9669\u5bf9\u6709\u6548\u7ba1\u7406\u8fd9\u79cd\u60c5\u51b5\u81f3\u5173\u91cd\u8981\u3002"
+        },
+        {
+            "sequence": 1,
+            "text_en": "Long-term stress is a persistent state of heightened emotional or mental tension resulting from various factors such as work pressure, relationship problems, or financial worries. This prolonged stress can have detrimental effects on the body, including the cardiovascular system. One of the essential tools for measuring the impact of stress on the cardiovascular system is heart rate variability (HRV).",
+            "text_zh": "\u957f\u671f\u5e94\u6fc0\u662f\u7531\u5404\u79cd\u56e0\u7d20\u5f15\u8d77\u7684\u6301\u7eed\u5904\u4e8e\u60c5\u7eea\u6216\u5fc3\u7406\u7d27\u5f20\u72b6\u6001\u7684\u72b6\u6001\uff0c\u5982\u5de5\u4f5c\u538b\u529b\u3001\u4eba\u9645\u5173\u7cfb\u95ee\u9898\u6216\u8d22\u52a1\u62c5\u5fe7\u3002\u8fd9\u79cd\u957f\u65f6\u95f4\u7684\u538b\u529b\u53ef\u80fd\u5bf9\u8eab\u4f53\u4ea7\u751f\u4e0d\u5229\u5f71\u54cd\uff0c\u5305\u62ec\u5fc3\u8840\u7ba1\u7cfb\u7edf\u3002\u8861\u91cf\u5e94\u6fc0\u5bf9\u5fc3\u8840\u7ba1\u7cfb\u7edf\u5f71\u54cd\u7684\u91cd\u8981\u5de5\u5177\u4e4b\u4e00\u662f\u5fc3\u7387\u53d8\u5f02\u6027\uff08HRV\uff09\u3002"
+        },
+        {
+            "sequence": 2,
+            "text_en": "HRV is a method used to gauge the variation in time intervals between heartbeats. It is an indicator of the autonomic nervous system's activity, specifically the balance between the sympathetic and parasympathetic branches. A healthy heart rate variability reflects the body's ability to adapt to stress, with neither chronically high nor low heart rates being ideal. Chronic stress disrupts this balance, leading to an increased risk of cardiovascular diseases such as hypertension and heart disease.",
+            "text_zh": "\u5fc3\u7387\u53d8\u5f02\u6027\uff08HRV\uff09\u662f\u4e00\u79cd\u7528\u6765\u8861\u91cf\u5fc3\u8df3\u95f4\u65f6\u95f4\u95f4\u9694\u53d8\u5316\u7684\u65b9\u6cd5\u3002\u5b83\u662f\u81ea\u4e3b\u795e\u7ecf\u7cfb\u7edf\u6d3b\u52a8\u7684\u6307\u6807\uff0c\u7279\u522b\u662f\u4ea4\u611f\u795e\u7ecf\u548c\u526f\u4ea4\u611f\u795e\u7ecf\u4e4b\u95f4\u7684\u5e73\u8861\u3002\u5065\u5eb7\u7684\u5fc3\u7387\u53d8\u5f02\u6027\u53cd\u6620\u4e86\u8eab\u4f53\u9002\u5e94\u538b\u529b\u7684\u80fd\u529b\uff0c\u65e2\u4e0d\u8fc7\u9ad8\u4e5f\u4e0d\u8fc7\u4f4e\u7684\u5fc3\u7387\u90fd\u662f\u7406\u60f3\u7684\u3002\u6162\u6027\u538b\u529b\u4f1a\u7834\u574f\u8fd9\u79cd\u5e73\u8861\uff0c\u5bfc\u81f4\u589e\u52a0\u9ad8\u8840\u538b\u548c\u5fc3\u810f\u75c5\u7b49\u5fc3\u8840\u7ba1\u75be\u75c5\u7684\u98ce\u9669\u3002"
+        },
+        {
+            "sequence": 3,
+            "text_en": "Research has shown that individuals with type A personalities, characterized by competitiveness and time urgency, are particularly susceptible to the adverse effects of chronic stress on the heart. The constant release of stress hormones like adrenaline can cause blood vessels to constrict, leading to hypertension. Chronic hypertension, in turn, increases the risk of cardiovascular events, making it crucial to address and manage long-term stress effectively.",
+            "text_zh": "\u7814\u7a76\u8868\u660e\uff0c\u5177\u6709A\u578b\u4e2a\u6027\u7279\u5f81\u7684\u4e2a\u4f53\uff0c\u5176\u7279\u5f81\u662f\u5177\u6709\u7ade\u4e89\u6027\u548c\u65f6\u95f4\u7d27\u8feb\u611f\uff0c\u7279\u522b\u5bb9\u6613\u53d7\u5230\u6162\u6027\u538b\u529b\u5bf9\u5fc3\u810f\u7684\u4e0d\u826f\u5f71\u54cd\u3002\u5982\u80be\u4e0a\u817a\u7d20\u7b49\u538b\u529b\u6fc0\u7d20\u6301\u7eed\u91ca\u653e\u53ef\u80fd\u5bfc\u81f4\u8840\u7ba1\u6536\u7f29\uff0c\u4ece\u800c\u5bfc\u81f4\u9ad8\u8840\u538b\u3002\u6162\u6027\u9ad8\u8840\u538b\u53cd\u8fc7\u6765\u53c8\u589e\u52a0\u4e86\u5fc3\u8840\u7ba1\u4e8b\u4ef6\u7684\u98ce\u9669\uff0c\u56e0\u6b64\uff0c\u6709\u6548\u5e94\u5bf9\u548c\u7ba1\u7406\u957f\u671f\u538b\u529b\u81f3\u5173\u91cd\u8981\u3002"
+        },
+        {
+            "sequence": 4,
+            "text_en": "It is important to note that while stress can have some positive effects in certain situations, chronic stress poses a significant threat to overall health, particularly cardiovascular well-being. Managing stress in real-time through techniques like deep breathing and mindfulness can help regulate the body's stress response. Additionally, developing strategies to modulate one's emotional response to stress in the medium-term is essential for long-term cardiovascular health.",
+            "text_zh": "\u91cd\u8981\u7684\u662f\u8981\u6ce8\u610f\uff0c\u5c3d\u7ba1\u5728\u67d0\u4e9b\u60c5\u51b5\u4e0b\u538b\u529b\u53ef\u80fd\u4f1a\u4ea7\u751f\u4e00\u4e9b\u79ef\u6781\u7684\u5f71\u54cd\uff0c\u4f46\u6162\u6027\u538b\u529b\u5bf9\u6574\u4f53\u5065\u5eb7\u5c24\u5176\u662f\u5fc3\u8840\u7ba1\u5065\u5eb7\u6784\u6210\u91cd\u5927\u5a01\u80c1\u3002\u901a\u8fc7\u6df1\u547c\u5438\u548c\u6b63\u5ff5\u7b49\u5b9e\u65f6\u7ba1\u7406\u538b\u529b\u7684\u65b9\u6cd5\u53ef\u4ee5\u5e2e\u52a9\u8c03\u8282\u8eab\u4f53\u7684\u5e94\u6fc0\u53cd\u5e94\u3002\u6b64\u5916\uff0c\u53d1\u5c55\u80fd\u591f\u8c03\u8282\u4e2a\u4f53\u5bf9\u538b\u529b\u60c5\u7eea\u53cd\u5e94\u7684\u7b56\u7565\u5bf9\u957f\u671f\u5fc3\u8840\u7ba1\u5065\u5eb7\u81f3\u5173\u91cd\u8981\u3002"
+        },
+        {
+            "sequence": 5,
+            "text_en": "In conclusion, long-term stress can have severe implications on cardiovascular health, making it essential to understand its definition, measurement through HRV, and associated risks. By adopting effective stress management techniques and prioritizing mental well-being, individuals can mitigate the adverse effects of chronic stress and safeguard their cardiovascular health in the long run.",
+            "text_zh": "\u603b\u4e4b\uff0c\u957f\u671f\u538b\u529b\u5bf9\u5fc3\u8840\u7ba1\u5065\u5eb7\u4f1a\u4ea7\u751f\u4e25\u91cd\u5f71\u54cd\uff0c\u56e0\u6b64\u4e86\u89e3\u5176\u5b9a\u4e49\u3001\u901a\u8fc7\u5fc3\u7387\u53d8\u5f02\u6027\u6d4b\u91cf\u4ee5\u53ca\u76f8\u5173\u98ce\u9669\u81f3\u5173\u91cd\u8981\u3002\u901a\u8fc7\u91c7\u7528\u6709\u6548\u7684\u538b\u529b\u7ba1\u7406\u6280\u5de7\u5e76\u4f18\u5148\u5173\u6ce8\u5fc3\u7406\u5065\u5eb7\uff0c\u4e2a\u4eba\u53ef\u4ee5\u51cf\u8f7b\u6162\u6027\u538b\u529b\u7684\u4e0d\u826f\u5f71\u54cd\uff0c\u5e76\u4ece\u957f\u8fdc\u6765\u770b\u4fdd\u62a4\u4ed6\u4eec\u7684\u5fc3\u8840\u7ba1\u5065\u5eb7\u3002"
+        }
+    ]
+}

@@ -60,9 +60,6 @@ export default {
     created() {
         getArticleSetList(this.themeTitle_en).then((res) => {
             this.articleSetList = res;
-            this.articleSetList[1] = res[0];
-            this.articleSetList[2] = res[0];
-            this.articleSetList[3] = res[0];
             this.$emit("dataLoaded")
         }).catch(err => {
 

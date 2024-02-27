@@ -4,9 +4,8 @@ PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
 sys.path.append(PROJECT_ROOT)
 import json
 from utils.path import *
-from backend.utils.dataDirReadandWrite import readArticle
+from utils.dataDirReadandWrite import readArticle,appendProposition,clearPropositionFile
 from utils.llm import chat
-from utils.llm import translate_toChinese
 
 # prompt出处：https://smith.langchain.com/hub/wfh/proposal-indexing?organizationId=97591f89-2916-48d3-804e-20cab23f91aa
 # 有论文
@@ -25,6 +24,7 @@ Output: [ "The earliest evidence for the Easter Hare was recorded in south-west 
 
 
 def generateProposition(paragraph):
+
 
     template = f"""
         'Decompose the following:\n{paragraph}'
@@ -45,23 +45,18 @@ def generateProposition(paragraph):
 
 
 
-def main(theme, videoTitle):
-
+def main(theme, videoTitle,startFrom=0):
+    print(f"generating proposition, start from article{startFrom}")
     articleFilePathList = getArticleFilePathList(theme=theme,videoTitle=videoTitle)
-
-    for articleSequence in range(len(articleFilePathList)):
-
-        # 文件不存在则创建，存在则保持原状
-        path_propositionFile = getPropositionFilePath(theme=theme,videoTitle=videoTitle,articleSequence=articleSequence)
-        f = open(path_propositionFile,'a',encoding='utf-8')
-        f.close()
-
+    for articleSequence in range(startFrom,len(articleFilePathList)):
+        # 对于proposition, 写文件是间断的，如果挂在半中间，先前的内容就要牺牲掉
+        clearPropositionFile(theme=theme,videoTitle=videoTitle,articleSequence=articleSequence)
+        print(f"--article{articleSequence}")
         article = readArticle(theme=theme,videoTitle=videoTitle,articleSequence=articleSequence)
         paragraphList = article['paragraphList']
 
-
         for paragraph in paragraphList:
-
+            print(f"----paragraph{paragraph['sequence']}")
             # 获取数据
             paragraphProposition = {
                 'sequence':paragraph['sequence'],
@@ -69,25 +64,7 @@ def main(theme, videoTitle):
             }
 
             # 写入文件
-            with open(path_propositionFile,'r+',encoding='utf-8') as f:
-                try:
-                    fileContent = json.load(f)
-                    fileContent['paragraphList'].append(paragraphProposition)
-                    # 清空
-                    f.seek(0)   
-                    f.truncate(0)
-                    # 重写
-                    f.write(json.dumps(fileContent,indent=4))
-                except ValueError: # 空文件触发
-                        fileContent = {
-                            'meta':{
-                                'theme':theme,
-                                'videoTitle':videoTitle,
-                                'articleSequence':articleSequence
-                            },
-                            'paragraphList':[paragraphProposition]
-                        }
-                        f.write(json.dumps(fileContent,indent=4))
+            appendProposition(theme=theme,videoTitle=videoTitle,articleSequence=articleSequence,proposition=paragraphProposition)
 
 
 

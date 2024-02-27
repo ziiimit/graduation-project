@@ -1,0 +1,64 @@
+{
+    "meta": {
+        "theme": "The Science of Well-being",
+        "videoTitle": "The Science of Emotions & Relationships",
+        "articleSequence": 14
+    },
+    "paragraphList": [
+        {
+            "sequence": 0,
+            "proposition": [
+                "Pheromones are intriguing chemicals.",
+                "Pheromones play a significant role in inter-species and intra-species communication.",
+                "Chemical signals are released by one member of a species.",
+                "Chemical signals can influence the behavior or physiology of others within the same species.",
+                "Chemical signals can influence the behavior or physiology of others even in different species.",
+                "The impact of pheromones is well-studied in animals.",
+                "The extent of pheromones' influence in humans is a topic of ongoing debate."
+            ]
+        },
+        {
+            "sequence": 1,
+            "proposition": [
+                "In animal interactions, pheromones can convey important information.",
+                "Rodents have a keen ability to detect the scent markings of potential predators through pheromones.",
+                "This ability allows rodents to identify threats and take necessary precautions for survival.",
+                "In humans, the existence and effects of pheromones are controversial.",
+                "Some studies suggest that humans can exhibit pheromonal effects.",
+                "These effects include menstrual cycle synchronization and the ability to identify familiar individuals based on scent.",
+                "The scientific community remains divided on the conclusive evidence."
+            ]
+        },
+        {
+            "sequence": 2,
+            "proposition": [
+                "One fascinating pheromone effect observed in animal models is the Vandenbergh effect.",
+                "The Vandenbergh effect is demonstrated in pre-pubertal females.",
+                "The Vandenbergh effect involves the rapid onset of puberty.",
+                "The onset of puberty occurs upon encountering a novel male that is not a family member.",
+                "Recent research on mandrills has shown evidence of the Vandenbergh effect.",
+                "The research on mandrills highlights the complexity of pheromone-mediated changes in sexual maturation."
+            ]
+        },
+        {
+            "sequence": 3,
+            "proposition": [
+                "Another notable pheromone effect is known as the Bruce effect.",
+                "The Bruce effect demonstrates the potential for pheromones to influence reproductive outcomes.",
+                "In pregnant animals, the introduction of a new male can lead to spontaneous miscarriage.",
+                "The father needs to be present to protect against this effect.",
+                "This finding underscores the impact of pheromones on reproductive behavior in animals.",
+                "The relevance of the Bruce effect to human biology remains a subject of ongoing investigation."
+            ]
+        },
+        {
+            "sequence": 4,
+            "proposition": [
+                "The existence of pheromonal effects in humans continues to be a topic of debate.",
+                "Insights gained from animal studies offer valuable perspectives on the potential influence of chemical signals on behavior and physiology.",
+                "Further research is needed to elucidate the role of pheromones in human interactions.",
+                "Further research is needed to explore the implications of pheromones for various aspects of human biology, including puberty and reproductive health."
+            ]
+        }
+    ]
+}

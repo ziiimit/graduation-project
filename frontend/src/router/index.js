@@ -35,7 +35,6 @@ export let routes = [
     name: "SearchResult",
     component: () => import("@/views/search_result/index.vue")
   },
-
 ];
 const router = new VueRouter({
   mode: "history",

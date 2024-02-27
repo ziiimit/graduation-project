@@ -1,0 +1,56 @@
+{
+    "meta": {
+        "theme": "The Science of Well-being",
+        "videoTitle": "How to Prevent & Treat Colds & Flu",
+        "articleSequence": 3
+    },
+    "paragraphList": [
+        {
+            "sequence": 0,
+            "proposition": [
+                "Charting health trends and sickness can be a valuable tool in understanding and improving one's immune system and overall well-being.",
+                "The process involves monitoring various factors such as sleep quality, exercise intensity, travel, and exposure to different environments.",
+                "Individuals can gain insights into how their behaviors may impact their susceptibility to colds and flu by keeping track of these variables and analyzing patterns."
+            ]
+        },
+        {
+            "sequence": 1,
+            "proposition": [
+                "The text describes how the author developed a system to track daily activities and health indicators in a simple and efficient manner.",
+                "The author noted details such as workout intensity, quality of sleep, and exposure to cold temperatures.",
+                "The author was able to identify correlations between certain activities and the onset of cold or flu symptoms.",
+                "This self-tracking approach allowed the author to gradually reduce the frequency of illnesses over the years."
+            ]
+        },
+        {
+            "sequence": 2,
+            "proposition": [
+                "Analyzing one's health trends can provide valuable information on how the immune system responds to various lifestyle factors.",
+                "Examining the days leading up to the onset of illness can help individuals potentially identify specific triggers or patterns that make them more susceptible to getting sick.",
+                "This knowledge empowers individuals to make informed decisions to protect themselves from infections and maintain a healthier lifestyle."
+            ]
+        },
+        {
+            "sequence": 3,
+            "proposition": [
+                "The text emphasizes the importance of being proactive in avoiding exposure to germs that can cause colds and flu.",
+                "Behaviors like interacting with sick individuals or crowded environments can increase the risk of getting infected.",
+                "Individuals can reduce the risk of getting infected by being mindful of such behaviors.",
+                "Engaging in preventive measures can help in minimizing the chances of falling ill.",
+                "Practicing good hygiene and avoiding high-risk situations when unwell are examples of preventive measures.",
+                "Engaging in preventive measures can reduce the chances of falling ill."
+            ]
+        },
+        {
+            "sequence": 4,
+            "proposition": [
+                "Charting health trends and sickness can be a beneficial tool in managing one's immune system and preventing illnesses.",
+                "Monitoring daily activities can potentially reduce the frequency of colds and flu.",
+                "Identifying patterns can potentially reduce the frequency of colds and flu.",
+                "Making informed adjustments can potentially reduce the frequency of colds and flu.",
+                "Individuals can potentially reduce the frequency of colds and flu by monitoring daily activities, identifying patterns, and making informed adjustments.",
+                "This proactive approach not only enhances personal well-being but also contributes to a healthier and more resilient immune system."
+            ]
+        }
+    ]
+}

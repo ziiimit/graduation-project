@@ -1,0 +1,59 @@
+{
+    "meta": {
+        "theme": "The Science of Well-being",
+        "videoTitle": "The Science of Emotions & Relationships",
+        "articleSequence": 5
+    },
+    "paragraphList": [
+        {
+            "sequence": 0,
+            "proposition": [
+                "Understanding our emotions and feelings is a crucial aspect of navigating our daily lives.",
+                "Asking ourselves three key questions can help us gain insight into our internal state and make informed decisions about how to proceed.",
+                "The three key questions revolve around the concepts of autonomic arousal, valence, and interoception/exteroception."
+            ]
+        },
+        {
+            "sequence": 1,
+            "proposition": [
+                "It is important to consider the level of autonomic arousal.",
+                "The level of autonomic arousal refers to the continuum of alertness to calmness that individuals experience.",
+                "Assessing where individuals fall on the scale of autonomic arousal can help gauge their current emotional state and its impact.",
+                "If individuals are feeling panicked or highly alert, they may need to take steps to calm themselves down before engaging in certain activities.",
+                "If individuals are feeling drowsy or lethargic, they may need to consider if they are in the right state of mind to tackle certain tasks effectively."
+            ]
+        },
+        {
+            "sequence": 2,
+            "proposition": [
+                "We should evaluate our valence.",
+                "Valence refers to how we are feeling in terms of good or bad.",
+                "Understanding our overall emotional well-being is essential.",
+                "Rating our emotional state on a scale can help pinpoint whether we are feeling positive, negative, or somewhere in between.",
+                "Factors such as our physical condition, recent experiences, and external influences can contribute to our valence.",
+                "Recognizing how we feel can guide us in choosing activities that align with our emotional state."
+            ]
+        },
+        {
+            "sequence": 3,
+            "proposition": [
+                "Interoception relates to our internal focus on bodily sensations and emotions.",
+                "Exteroception involves our external focus on the world around us.",
+                "This dynamic balance between internal and external awareness plays a significant role in shaping our emotions and responses to stimuli.",
+                "Being attuned to whether our attention is predominantly inward or outward can provide insight into how we are processing and reacting to our surroundings."
+            ]
+        },
+        {
+            "sequence": 4,
+            "proposition": [
+                "Reflecting on autonomic arousal can enhance our understanding of the emotional landscape.",
+                "Reflecting on valence can enhance our understanding of the emotional landscape.",
+                "Reflecting on interoception/exteroception can enhance our understanding of the emotional landscape.",
+                "Being mindful of our position on autonomic arousal can help us make more informed decisions on managing emotions, activities, and interactions.",
+                "Being mindful of our position on valence can help us make more informed decisions on managing emotions, activities, and interactions.",
+                "Being mindful of our position on interoception/exteroception can help us make more informed decisions on managing emotions, activities, and interactions.",
+                "Asking ourselves key questions can cultivate a deeper awareness and empowerment in navigating emotional experiences."
+            ]
+        }
+    ]
+}

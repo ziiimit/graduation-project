@@ -33,7 +33,6 @@ export default {
     created() {
         console.log("loading")
         getArticleSet(this.articleSetTitle_en).then(res => {
-            console.log(res)
             this.articleList = res
             this.$emit("dataLoaded", res[0]['articleSetTitle_zh'])
         }).catch(err => {

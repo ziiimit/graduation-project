@@ -1,0 +1,69 @@
+{
+    "meta": {
+        "theme": "The Science of Well-being",
+        "videoTitle": "How to Prevent & Treat Colds & Flu",
+        "articleSequence": 2
+    },
+    "paragraphList": [
+        {
+            "sequence": 0,
+            "proposition": [
+                "The flu virus is a type of virus.",
+                "The flu virus is similar to the cold virus.",
+                "The flu virus comes in different variations known as serotypes.",
+                "There are three main categories of flu viruses: type A, type B, and type C.",
+                "The variations of flu viruses are based on the different proteins expressed on their surface.",
+                "The Spanish Flu was a devastating pandemic that occurred between 1918 and 1920.",
+                "The Spanish Flu was caused by a type A H1N1 virus.",
+                "The common flu viruses fall under the category of type A.",
+                "Type A flu viruses are responsible for causing seasonal flu outbreaks."
+            ]
+        },
+        {
+            "sequence": 1,
+            "proposition": [
+                "The transmission of the flu virus primarily occurs through human-to-human contact.",
+                "The flu virus can be contracted by being exposed to respiratory droplets from an infected person's sneeze or cough.",
+                "The flu virus can be transmitted by touching surfaces contaminated with the virus and then touching the face.",
+                "This allows the flu virus to enter the body through mucous membranes.",
+                "The flu virus can only survive on surfaces for about two hours.",
+                "Direct contact with an infected individual is the primary mode of transmission of the flu virus."
+            ]
+        },
+        {
+            "sequence": 2,
+            "proposition": [
+                "Vaccines are developed each year to combat the spread of the flu virus.",
+                "Vaccines are commonly known as flu shots.",
+                "Flu shots target specific strains of the flu virus.",
+                "The effectiveness of the flu shot varies depending on the match between the vaccine and the circulating flu strains.",
+                "Studies have shown that getting the flu shot can reduce the risk of contracting the prevalent flu strain by 40% to 60% in a given season.",
+                "Even if an individual still gets the flu after receiving the vaccine, the symptoms may be less severe."
+            ]
+        },
+        {
+            "sequence": 3,
+            "proposition": [
+                "The decision to get a flu shot is a personal one.",
+                "The decision to get a flu shot depends on factors such as individual health status and level of exposure to potential sources of the virus.",
+                "Some people opt not to get vaccinated due to lower risk factors or personal preferences.",
+                "Others may choose to get vaccinated to protect themselves.",
+                "Others may choose to get vaccinated to protect vulnerable individuals around them.",
+                "Such vulnerable individuals include those who are immunocompromised.",
+                "Such vulnerable individuals include those in high-risk environments like schools or healthcare settings."
+            ]
+        },
+        {
+            "sequence": 4,
+            "proposition": [
+                "Getting the flu shot is a preventative measure.",
+                "The flu shot can help reduce the risk of flu infection.",
+                "The flu shot can help reduce the severity of flu infection.",
+                "Each individual should consider their own circumstances.",
+                "Each individual should consult with healthcare professionals.",
+                "Consulting with healthcare professionals can help make an informed decision.",
+                "The decision about whether getting the flu shot is the right choice should be informed."
+            ]
+        }
+    ]
+}

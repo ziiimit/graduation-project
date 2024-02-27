@@ -1,0 +1,51 @@
+{
+    "meta": {
+        "theme": "The Science of Well-being",
+        "videoTitle": "The Science of Emotions & Relationships",
+        "articleSequence": 20
+    },
+    "paragraphList": [
+        {
+            "sequence": 0,
+            "proposition": [
+                "The human brain is a complex organ.",
+                "The human brain is divided into two hemispheres: the left brain and the right brain.",
+                "Each hemisphere is responsible for different functions.",
+                "Understanding the distinctions between the left brain and the right brain can provide valuable insights into how our brains work."
+            ]
+        },
+        {
+            "sequence": 1,
+            "proposition": [
+                "For right-handed individuals, the left brain is linguistically dominant.",
+                "This means that most language functions, including lexicon, grammar, and syntax, are centered in the left hemisphere of the brain.",
+                "Even left-handed individuals who have been forced to write with their right hand still exhibit language dominance in the left hemisphere due to the timing of language development in the brain.",
+                "Left-handed individuals who have been forced to write with their right hand exhibit language dominance in the left hemisphere.",
+                "For natural left-handers, language is distributed more evenly between the left and right hemispheres.",
+                "This makes language less lateralized compared to right-handers."
+            ]
+        },
+        {
+            "sequence": 2,
+            "proposition": [
+                "The left brain is associated with language and mathematics.",
+                "The right brain has a different focus.",
+                "Despite popular belief that the right brain is solely emotive and holistic, the right brain is actually linguistically primitive.",
+                "The right brain excels in manipulating spatial information and visual-spatial tasks.",
+                "The specialization in spatial awareness distinguishes the right hemisphere from the left.",
+                "The specialization highlights the diverse capabilities of each hemisphere."
+            ]
+        },
+        {
+            "sequence": 3,
+            "proposition": [
+                "Understanding the distinct functions of the left hemisphere of the brain sheds light on how different areas of cognition are processed.",
+                "Understanding the distinct functions of the right hemisphere of the brain sheds light on how different areas of cognition are processed.",
+                "The left brain's dominance in language for most individuals contrasts with the right brain's expertise in spatial awareness.",
+                "The left brain has an advantage in mathematical tasks.",
+                "The right brain has expertise in spatial awareness.",
+                "This division of labor between the hemispheres contributes to the intricate ways in which our brains enable us to communicate, solve problems, and navigate the world around us."
+            ]
+        }
+    ]
+}

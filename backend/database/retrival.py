@@ -27,7 +27,7 @@ def getRelevantParagraphList(query_en, relevanceRate, upperLimit):
                 CALL db.index.vector.queryNodes('proposition-embeddings',$upperLimit,$queryEmbedding)
                 YIELD node AS proposition, score
                 MATCH (t:Theme)<-[:BELONGS_TO]-(as:ArticleSet)-[:HAS]->(a:Article)-[:CONSTRUCTED_BY]->(p:Paragraph)<-[:GENERATED_FROM]-(proposition)
-                RETURN a.summary_zh as articleSummary_zh, article p.text_en as paragraphText_en, a.title_en as articleTitle_en, a.title_zh as articleTitle_zh, as.title_en as articleSetTitle_en, as.title_zh as articleSetTitle_zh, t.title_en as themeTitle_en, t.title_zh as themeTitle_zh, score
+                RETURN  a.sequence as articleSequence,a.summary_zh as articleSummary_zh,p.text_en as paragraphText_en, a.title_en as articleTitle_en, a.title_zh as articleTitle_zh, as.title_en as articleSetTitle_en, as.title_zh as articleSetTitle_zh, t.title_en as themeTitle_en, t.title_zh as themeTitle_zh, score
             """, queryEmbedding=queryEmbedding, upperLimit=upperLimit).data()
 
             return list(filter(relevant_enough, resp))

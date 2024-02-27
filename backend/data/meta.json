@@ -13,5 +13,50 @@
         "videoURL": "https://www.youtube.com/watch?v=vA50EK70whE",
         "theme": "Focus, Productivity and Creativity",
         "videoTitle": "How to Increase Motivation & Drive"
+    },
+    {
+        "videoURL": "https://www.youtube.com/watch?v=hcuMLQVAgEg",
+        "theme": "The Science of Well-being",
+        "videoTitle": "The Science of Emotions & Relationships"
+    },
+    {
+        "videoURL": "https://www.youtube.com/watch?v=ntfcfJ28eiU",
+        "theme": "Mental Health and Addiction",
+        "videoTitle": "Tools for Managing Stress & Anxiety"
+    },
+    {
+        "videoURL": "https://www.youtube.com/watch?v=hx3U64IXFOY",
+        "theme": "Focus, Productivity and Creativity",
+        "videoTitle": "Using Failures, Movement & Balance to Learn Faster"
+    },
+    {
+        "videoURL": "https://www.youtube.com/watch?v=q1Ss8sTbFBY",
+        "theme": "The Science of Well-being",
+        "videoTitle": "Fitness Toolkit: Protocol & Tools to Optimize Physical Health"
+    },
+    {
+        "videoURL": "https://www.youtube.com/watch?v=LYYyQcAJZfk",
+        "theme": "The Science of Well-being",
+        "videoTitle": "Science-Supported Tools to Accelerate Your Fitness Goals"
+    },
+    {
+        "videoURL": "https://www.youtube.com/watch?v=CrtR12PBKb0",
+        "theme": "Focus, Productivity and Creativity",
+        "videoTitle": "Goals Toolkit: How to Set & Achieve Your Goals"
+    },
+    {
+        "videoURL": "https://www.youtube.com/watch?v=GqPGXG5TlZw",
+        "theme": "The Science of Well-being",
+        "videoTitle": "How to Lose Fat with Science-Based Tools"
+    },
+    {
+        "videoURL": "https://www.youtube.com/watch?v=VAEzZeaV5zM",
+        "theme": "Mental Health and Addiction",
+        "videoTitle": "Controlling Sugar Cravings & Metabolism with Science-Based Tools"
+    },
+    {
+        "videoTitle": "How to Prevent & Treat Colds & Flu",
+        "videoURL": "https://www.youtube.com/watch?v=AtChcxeaukQ",
+        "theme": "The Science of Well-being"
     }
 ]

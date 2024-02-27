@@ -1,0 +1,50 @@
+{
+    "meta": {
+        "theme": "The Science of Well-being",
+        "videoTitle": "How to Prevent & Treat Colds & Flu",
+        "articleSequence": 15
+    },
+    "paragraphList": [
+        {
+            "sequence": 0,
+            "proposition": [
+                "After a rigorous exercise session, the body goes through a post-exercise stress response.",
+                "The post-exercise stress response includes an increase in cortisol levels.",
+                "The post-exercise stress response includes the production of white blood cells.",
+                "Chronic stress due to intense exercise can have a negative impact on the immune system.",
+                "Chronic stress due to lack of sleep can have a negative impact on the immune system.",
+                "Chronic stress due to other life stressors can have a negative impact on the immune system.",
+                "Incorporating carbohydrates into your post-exercise nutrition routine can help mitigate some of the inflammation induced by exercise."
+            ]
+        },
+        {
+            "sequence": 1,
+            "proposition": [
+                "Carbohydrates such as rice have been shown to reduce markers of inflammation by around 30 to 40% when consumed after exercise, compared to just water intake.",
+                "Carbohydrates such as oatmeal have been shown to reduce markers of inflammation by around 30 to 40% when consumed after exercise, compared to just water intake.",
+                "Carbohydrates such as pasta have been shown to reduce markers of inflammation by around 30 to 40% when consumed after exercise, compared to just water intake.",
+                "Fruits have been shown to reduce markers of inflammation by around 30 to 40% when consumed after exercise, compared to just water intake.",
+                "The reduction of markers of inflammation by around 30 to 40% is especially significant for individuals who exercise in a fasted state.",
+                "It is advisable to consume complex carbohydrates and fruits after exercising for more than 60 to 75 minutes if you prefer to exercise in the morning on an empty stomach and rely on caffeine for an energy boost.",
+                "The intake of carbohydrates and fruits within 45 minutes to an hour post-exercise helps prevent a prolonged elevation of inflammatory molecules.",
+                "The intake of carbohydrates and fruits within 45 minutes to an hour post-exercise ultimately supports the body in combatting colds and flu by enhancing the function of the innate immune system."
+            ]
+        },
+        {
+            "sequence": 2,
+            "proposition": [
+                "The relationship between exercise and immune function is crucial for overall health.",
+                "The relationship between nutrition and immune function is crucial for overall health.",
+                "Understanding how carbohydrates can positively impact post-exercise inflammation and cortisol levels is important for optimizing recovery and immune response.",
+                "Individuals can optimize their recovery and immune response by understanding how carbohydrates can positively impact post-exercise inflammation and cortisol levels.",
+                "The detailed mechanisms behind the interaction between carbohydrates, post-exercise inflammation, and cortisol levels are complex.",
+                "The detailed mechanisms behind the interaction between nutrition, post-exercise inflammation, and cortisol levels are complex.",
+                "The detailed mechanisms behind the interaction between exercise, nutrition, and immune function are complex.",
+                "The detailed mechanisms warrant further exploration in future discussions.",
+                "Proper nutrition plays a vital role in maintaining a balanced immune system.",
+                "Proper nutrition is especially important for maintaining a balanced immune system for those engaging in regular physical activity.",
+                "Engaging in regular physical activity makes proper nutrition especially important for maintaining a balanced immune system."
+            ]
+        }
+    ]
+}

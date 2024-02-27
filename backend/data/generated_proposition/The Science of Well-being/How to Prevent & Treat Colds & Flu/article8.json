@@ -1,0 +1,87 @@
+{
+    "meta": {
+        "theme": "The Science of Well-being",
+        "videoTitle": "How to Prevent & Treat Colds & Flu",
+        "articleSequence": 8
+    },
+    "paragraphList": [
+        {
+            "sequence": 0,
+            "proposition": [
+                "The immune system is an intricate defense mechanism.",
+                "The immune system plays a crucial role in protecting the body against pathogens and foreign invaders.",
+                "Among its components, the adaptive immune system stands out.",
+                "The adaptive immune system is a remarkable aspect of our biological makeup.",
+                "The physical barriers form the first line of defense.",
+                "The innate immune system forms the first line of defense.",
+                "The adaptive immune system takes a more specific and targeted approach."
+            ]
+        },
+        {
+            "sequence": 1,
+            "proposition": [
+                "The primary function of the adaptive immune system is to produce antibodies.",
+                "Antibodies are tailored to combat particular intruders that have entered the body.",
+                "Antibodies are known as immunoglobulins.",
+                "Immunoglobulins are designed to match the surface contours of specific viruses or pathogens.",
+                "The specific viruses or pathogens have infected the body.",
+                "The initial wave of antibodies produced is referred to as IgM antibodies.",
+                "IgM antibodies may not be a perfect fit.",
+                "IgM antibodies play a crucial role in recognizing and binding to the invaders."
+            ]
+        },
+        {
+            "sequence": 2,
+            "proposition": [
+                "The adaptive immune system is defined by its ability to learn and remember.",
+                "The initial response involves IgM antibodies.",
+                "The system refines its attack strategy through a remarkable process.",
+                "Signals are sent back to stem cells.",
+                "The signals trigger the production of a more precise type of antibodies known as IgG antibodies.",
+                "IgG antibodies are highly specific to the shape of the virus.",
+                "IgG antibodies can effectively neutralize the viral particles."
+            ]
+        },
+        {
+            "sequence": 3,
+            "proposition": [
+                "The adaptive immune system retains a memory of past battles.",
+                "The adaptive immune system stores information about the encountered pathogens and the antibodies that were effective in combating them.",
+                "The memory of past battles allows for a faster and more efficient response upon re-exposure to the same pathogens in the future.",
+                "The adaptive immune system can quickly mobilize the necessary antibodies to prevent re-infection whether it's the same strain of the flu virus or a recurring cold."
+            ]
+        },
+        {
+            "sequence": 4,
+            "proposition": [
+                "The immune system's cellular actions play a vital role in supporting immune responses.",
+                "The lymphatic system works in collaboration with the vascular system to filter out pathogens and damaged cells from the blood.",
+                "The lymphatic system produces essential chemicals that aid in combating infections.",
+                "The lymphatic system serves as a transportation network for immune cells and substances.",
+                "The lymphatic system contributes to the overall functioning of the immune system."
+            ]
+        },
+        {
+            "sequence": 5,
+            "proposition": [
+                "The lymphatic system's involvement becomes particularly significant in the context of exercise and immune response.",
+                "Research indicates that certain forms and intensities of exercise can enhance the innate immune system's ability to combat infections.",
+                "Stimulating the lymphatic system and boosting the activity of innate immune cells can help fortify the body's defenses.",
+                "Exercise can reduce reliance on the adaptive immune system to fight off infections."
+            ]
+        },
+        {
+            "sequence": 6,
+            "proposition": [
+                "The adaptive immune system's ability to generate tailored antibodies underscores its crucial role in defending the body against pathogens.",
+                "The adaptive immune system's ability to retain a memory of past encounters underscores its crucial role in defending the body against pathogens.",
+                "The ability to generate tailored antibodies is a key function of the adaptive immune system.",
+                "The ability to retain a memory of past encounters is a key function of the adaptive immune system.",
+                "The immune system's crucial role is to defend the body against pathogens.",
+                "The lymphatic system collaboratively supports the immune system.",
+                "The immune system forms a sophisticated defense network.",
+                "The defense network actively works to safeguard our health and well-being."
+            ]
+        }
+    ]
+}

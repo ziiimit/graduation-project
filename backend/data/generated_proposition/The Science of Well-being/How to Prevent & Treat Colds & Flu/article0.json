@@ -1,0 +1,70 @@
+{
+    "meta": {
+        "theme": "The Science of Well-being",
+        "videoTitle": "How to Prevent & Treat Colds & Flu",
+        "articleSequence": 0
+    },
+    "paragraphList": [
+        {
+            "sequence": 0,
+            "proposition": [
+                "The common cold is caused by various strains of the Rhinovirus.",
+                "The Rhinovirus is a type of virus.",
+                "The common cold is a viral infection that affects the upper respiratory system.",
+                "There are over 160 different serotypes of the cold virus.",
+                "It becomes challenging to develop a universal cure for the common cold.",
+                "The variations in the virus's structure mean that antibodies developed against one strain may not be effective against a different strain.",
+                "This explains why a cure for the common cold remains elusive.",
+                "This explains why individuals can experience multiple colds in a year despite previous exposure to the virus."
+            ]
+        },
+        {
+            "sequence": 1,
+            "proposition": [
+                "The transmission of the cold virus primarily occurs through respiratory droplets when an infected person sneezes or coughs.",
+                "The virus can also spread through contact with contaminated surfaces where it can survive for up to 24 hours.",
+                "Cold temperatures do not directly cause the common cold.",
+                "The misconception that cold weather leads to colds has perpetuated a myth.",
+                "The virus spreads through person-to-person contact rather than atmospheric conditions."
+            ]
+        },
+        {
+            "sequence": 2,
+            "proposition": [
+                "Skin acts as a protective barrier against viruses, including the cold virus.",
+                "The virus can enter the body through mucous membranes, particularly the eyes, nose, and mouth.",
+                "Touching contaminated surfaces and then touching the face increases the risk of transmission.",
+                "The small size of cold virus particles is approximately five microns.",
+                "The small size of cold virus particles enables them to spread easily through the air.",
+                "Cold virus particles generally do not linger in the air for extended periods.",
+                "Cold virus particles settle on surfaces where they can remain infectious."
+            ]
+        },
+        {
+            "sequence": 3,
+            "proposition": [
+                "Understanding the contagious nature of the common cold is crucial in preventing its spread.",
+                "Infected individuals can transmit the virus through respiratory secretions.",
+                "Proper hygiene practices are essential in reducing transmission.",
+                "Hygiene practices include frequent handwashing and avoiding touching the face.",
+                "Dispelling myths about when an individual is contagious is essential in promoting public health awareness.",
+                "Misconceptions about coughing or sneezing duration should be dispelled.",
+                "Dispelling myths is important in preventing the spread of the common cold."
+            ]
+        },
+        {
+            "sequence": 4,
+            "proposition": [
+                "The common cold remains an ongoing challenge.",
+                "The challenge is due to the array of cold virus strains.",
+                "The challenge is also due to the ease of transmission.",
+                "Educating individuals on the true source and transmission of the cold virus is vital.",
+                "The education is vital in combating misinformation.",
+                "The education is vital in promoting effective prevention strategies.",
+                "Understanding the mechanisms of transmission and contagion is important.",
+                "Individuals can take proactive measures to protect themselves from contracting the common cold.",
+                "Individuals can take proactive measures to protect others from contracting the common cold."
+            ]
+        }
+    ]
+}

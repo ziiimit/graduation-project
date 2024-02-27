@@ -1,0 +1,66 @@
+{
+    "meta": {
+        "theme": "The Science of Well-being",
+        "videoTitle": "How to Prevent & Treat Colds & Flu",
+        "articleSequence": 18
+    },
+    "paragraphList": [
+        {
+            "sequence": 0,
+            "proposition": [
+                "Echinacea and zinc are two substances often discussed for their potential benefits in supporting the immune system, especially in the context of colds and flu.",
+                "Echinacea is a compound believed to have immune-boosting properties.",
+                "Echinacea is a popular choice for some individuals looking to prevent infections.",
+                "Scientific research on the efficacy of Echinacea in warding off colds and flu is not definitive.",
+                "Echinacea is generally considered safe.",
+                "High doses of Echinacea may negatively impact the innate immune system by reducing white blood cell count and natural killer cells.",
+                "It is advisable to use Echinacea sparingly, such as when feeling rundown or during the winter months when susceptibility to infections is higher.",
+                "Continuous use of Echinacea for extended periods is not recommended."
+            ]
+        },
+        {
+            "sequence": 1,
+            "proposition": [
+                "Zinc has demonstrated more conclusive evidence in supporting the immune system.",
+                "Zinc is particularly effective in combating colds.",
+                "Studies suggest that a daily intake of at least 100 milligrams of zinc can help reduce the likelihood of contracting a cold or shorten its duration.",
+                "It is essential to note that taking zinc on an empty stomach may cause gastric distress.",
+                "For optimal results, zinc should be consumed with a meal to mitigate potential side effects.",
+                "Dividing the 100-milligram dosage into two 50-milligram doses can be beneficial.",
+                "Taking zinc all at once with food can be beneficial."
+            ]
+        },
+        {
+            "sequence": 2,
+            "proposition": [
+                "Zinc supplementation is generally safe for most individuals.",
+                "Certain groups should exercise caution with zinc supplementation.",
+                "Individuals over 65 may benefit the most from zinc supplementation.",
+                "Children under 15 should consult a healthcare provider before adding zinc to their regimen.",
+                "Pregnant women should consult a healthcare provider before adding zinc to their regimen.",
+                "Research indicates a three times faster recovery rate from colds among individuals taking zinc.",
+                "The research emphasizes zinc's potential as a cost-effective and safe option for cold and flu management."
+            ]
+        },
+        {
+            "sequence": 3,
+            "proposition": [
+                "Consulting a healthcare provider before starting any supplement regimen is crucial.",
+                "The importance of consulting a healthcare provider before starting any supplement regimen is not dependent on age or health status.",
+                "The efficacy and safety of supplements can vary depending on individual health conditions and needs.",
+                "Supplementing with zinc at levels between 90 and 100 milligrams per day, without exceeding 120 milligrams, appears to be a reasonable approach for reducing the incidence and duration of colds and flu.",
+                "Most studies focus on zinc's impact on colds.",
+                "There is no conclusive reason to avoid zinc supplementation in cases of flu, according to experts in the field."
+            ]
+        },
+        {
+            "sequence": 4,
+            "proposition": [
+                "Echinacea may have some supportive effects on the immune system.",
+                "The benefits of Echinacea for preventing colds and flu are not fully supported by scientific evidence.",
+                "Zinc shows promising results in reducing the occurrence and duration of colds.",
+                "Individuals can make informed decisions regarding supplement use to support their immune health during cold and flu seasons by following dosage recommendations, taking zinc with meals, and consulting healthcare professionals."
+            ]
+        }
+    ]
+}

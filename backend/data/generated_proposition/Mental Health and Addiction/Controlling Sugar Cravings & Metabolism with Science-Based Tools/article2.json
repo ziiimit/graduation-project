@@ -1,0 +1,70 @@
+{
+    "meta": {
+        "theme": "Mental Health and Addiction",
+        "videoTitle": "Controlling Sugar Cravings & Metabolism with Science-Based Tools",
+        "articleSequence": 2
+    },
+    "paragraphList": [
+        {
+            "sequence": 0,
+            "proposition": [
+                "The process of eating triggers a complex interplay of hormones and neural signals.",
+                "The complex interplay of hormones and neural signals regulates our appetite and metabolism.",
+                "One key hormone involved in our hunger response is ghrelin.",
+                "Ghrelin is produced in the stomach.",
+                "Ghrelin increases when it has been a while since we last ate.",
+                "Ghrelin acts on specific neurons in the brain.",
+                "Ghrelin acts particularly in the arcuate nucleus of the hypothalamus.",
+                "Ghrelin stimulates feelings of hunger.",
+                "When ghrelin levels are high, we are more likely to feel hungry.",
+                "When we eat, ghrelin levels drop.",
+                "Dropping ghrelin levels reduce our appetite."
+            ]
+        },
+        {
+            "sequence": 1,
+            "proposition": [
+                "The body responds to the intake of food in terms of blood glucose levels in addition to ghrelin.",
+                "When we consume carbohydrates, proteins, or fats, our blood glucose levels can rise.",
+                "It is crucial for the body, especially the brain and nervous system, to maintain stable blood glucose levels.",
+                "Extremes in blood glucose levels can be harmful to the body.",
+                "The pancreas releases insulin to regulate blood glucose.",
+                "Insulin is a hormone that helps move glucose from the bloodstream into cells for energy or storage.",
+                "Insulin plays a vital role in preventing the harmful effects of high blood sugar on the body, particularly the brain.",
+                "Excessive blood sugar levels can be neurotoxic and lead to cell damage.",
+                "Neurons are irreplaceable once lost."
+            ]
+        },
+        {
+            "sequence": 2,
+            "proposition": [
+                "The proper functioning of appetite-regulating hormones underscores the intricate balance required for overall health.",
+                "Appetite-regulating hormones play a crucial role in maintaining overall health.",
+                "The proper functioning of glucose-regulating mechanisms underscores the intricate balance required for overall health.",
+                "Glucose-regulating mechanisms are essential for maintaining overall health.",
+                "Individuals with conditions like type 1 diabetes, who do not produce insulin, face challenges in controlling their blood sugar levels.",
+                "Individuals with type 1 diabetes struggle to control their blood sugar levels due to the lack of insulin production.",
+                "Necessitating the administration of insulin to prevent complications related to high blood sugar.",
+                "Administering insulin is necessary to prevent complications linked to high blood sugar levels."
+            ]
+        },
+        {
+            "sequence": 3,
+            "proposition": [
+                "Glucose is a primary energy source for the brain and other cells.",
+                "Optimal brain function does not equate to consuming high amounts of sugar.",
+                "Some individuals report improved mental clarity during fasted states when blood glucose levels are low.",
+                "This suggests that the brain's energy needs can be met through alternative sources like ketones in ketogenic diets.",
+                "Glucose remains a vital fuel for brain function for the majority of people not following such diets."
+            ]
+        },
+        {
+            "sequence": 4,
+            "proposition": [
+                "The hormonal interplay between ghrelin and insulin plays a crucial role in maintaining appetite control and metabolic stability.",
+                "The regulation of blood glucose levels plays a crucial role in maintaining appetite control and metabolic stability.",
+                "Understanding how ghrelin and insulin function can help individuals make informed choices about their eating habits and overall health."
+            ]
+        }
+    ]
+}

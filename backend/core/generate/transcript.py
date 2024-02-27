@@ -4,8 +4,8 @@ import sys
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
 sys.path.append(PROJECT_ROOT)
 from utils.path import *
+from utils.dataDirReadandWrite import writeTranscript
 
-import json
 import time
 
 # https://github.com/jdepoix/youtube-transcript-api/
@@ -21,16 +21,19 @@ from selenium.common.exceptions import NoSuchElementException
 def transformTimeFormat(originalTimeStr):
     components = originalTimeStr.split(":")
     res = 0
-    res += int(components[0]) * 60 * 60
-    res += int(components[1]) * 60 
-    res += int(components[2]) 
+    if len(components)==2:
+        res += int(components[0]) * 60 
+        res += int(components[1])
+    else:
+        res += int(components[0]) * 60 * 60
+        res += int(components[1]) * 60 
+        res += int(components[2]) 
     return res
             
 # 爬取视频标题、视频描述中的timestamps字符串
 # 确保机子能上外网且网不要太慢 & 有Firefox浏览器
 # 网慢就将下面sleep时间增加，没有firefox就改用别的浏览器
 def spider(url):
-
     driver = webdriver.Firefox()
     driver.get(url)
 
@@ -54,12 +57,12 @@ def spider(url):
     descriptionSpanList = driver.find_elements(By.CSS_SELECTOR, "#description #description-inner ytd-text-inline-expander yt-attributed-string span span")
     timestamps = []
     for i in range(len(descriptionSpanList)):
-        if(descriptionSpanList[i].text == "Timestamps"):
+        if(descriptionSpanList[i].text.startswith("Timestamps")):
             timestampsElementIndex = i+1
-            while(descriptionSpanList[timestampsElementIndex].text.startswith('0')):
+            while(descriptionSpanList[timestampsElementIndex].text[0].isdigit()):
                 timestampsElement = {
                     'startTime': transformTimeFormat(descriptionSpanList[timestampsElementIndex].text),
-                    'segmentTitle':descriptionSpanList[timestampsElementIndex + 1].text.split('\n')[0]
+                    'segmentTitle':descriptionSpanList[timestampsElementIndex + 1].text.split('\n')[0].strip()
                 }
                 timestampsElementIndex += 2
                 timestamps.append(timestampsElement)
@@ -89,45 +92,47 @@ def getTranscriptSegments(videoID,timestamps,abandonList):
     # tolerance设置为多少秒合适：
         # tolerance的值取小了，可能导致断点丢失；取大了，可能存在位置连续的断点，即冗余的断点；
         # 假设tolerance值取得比较好，不存在丢失的断点，breakpoints内的元素与原视频timestamps的元素之间的映射关系为多对一的满射
-    tolerance = 2
+    tolerance = 10
     breakpoints = []
     for i in range(len(transcripts)):
 
-        start = transcripts[i]['start']
+        start_trans = transcripts[i]['start']
 
         for item in timestamps:
-            startTime = item['startTime']
-            if abs(start-startTime) <= tolerance:
+            start_stamps = item['startTime']
+            if abs( start_trans - start_stamps ) <= tolerance:
                 breakpoints.append(i)
 
+    print("breakpoints start value:")
+    print([transcripts[index]['start'] for index in breakpoints])
 
-    # 接下来就是将位置连续的冗余断点清除
-    # 【假设？】最多会同时出现distance + 1 个位置连续的断点，清除连续体后面distance个
-    # 为了确保冗余断点彻底清除，distance可以设置得大一点，毕竟原视频的timestamps之间【肯定？】间隔了很多句话，不用担心清掉了不该清的断点
-    distance = 8
-    currentItemIndex = 0
+    # 接下来就是将breakpoints中连续的冗余断点清除
+    # 如果断点之间相差的值<=tolerance * 2, 说明其所指向的是timestamps中的同一个断点
+    distance = tolerance * 2
+    currentIndex = 0
     while True:
-        if( not currentItemIndex < len(breakpoints) - 1 ):
+
+        # 越界检查
+        if( not currentIndex < len(breakpoints) - 1 ):
             break
-        if(breakpoints[currentItemIndex + 1]-breakpoints[currentItemIndex] <= distance ):
-            breakpoints.remove(breakpoints[currentItemIndex + 1])
+
+        if(transcripts[breakpoints[currentIndex + 1]]['start'] - transcripts[breakpoints[currentIndex]]['start'] <= distance ):
+            breakpoints.remove(breakpoints[currentIndex + 1])
         else: 
-            currentItemIndex += 1
+            currentIndex += 1
+    print("breakpoints  start value after clearing:")
+    print([transcripts[index]['start'] for index in breakpoints])
 
 
+    assert len(breakpoints) == len(timestamps)
 
-    # 检查原视频的timestamps和我们找到的breakpoints的断点数量是否一样
-    # 如果一样，则基本可以确保已经将timestamps里的时间点，一一映射至了breakpoints中，接下来可以根据breakpoints来拼接segment
-    assert len(timestamps) == len(breakpoints)
-
-    
     # 获取transcripts按照timestamps标题划分的segments列表
     segments = []
     for i in range(len(breakpoints)):
 
-
         # 去除和视频主题无关的赞助内容等
-        segmentTitle = timestamps[i]['segmentTitle']
+        # 获取当前timestamps中的
+        segmentTitle = timestamps[i]['segmentTitle'] 
         shouldAbandon = False
         for item in abandonList:
             if item.lower() in segmentTitle.lower():
@@ -136,8 +141,6 @@ def getTranscriptSegments(videoID,timestamps,abandonList):
                 break
         if shouldAbandon:
             continue
-
-
 
         # 拼接segment
         text = ""
@@ -163,21 +166,25 @@ def getTranscriptSegments(videoID,timestamps,abandonList):
 
 
  
-def main(videoURL,theme):
+def main(videoURL,theme,abandonList):
 
+    print("start getting transcript")
+
+    ###############
+    print("spider, getVideoInfo")
     videoInfo = spider(videoURL)
     videoTitle = videoInfo['videoTitle'].split('|')[0].strip()
     timestamps = videoInfo['timestamps']
-
-    print("videoInfo:",videoInfo)
-
+    print("spider result:")
+    print("video title:",videoTitle)
+    print("timestamps without title:")
+    print([item['startTime'] for item in timestamps])
+    ################
+    print("get segements")
     videoID = videoURL.split('=')[-1]
-
-    abandonList = ['sponsor','office time', 'ag1','athletic greens','Announcement: Spanish Subtitles',"Surprise!","Notes About Spanish Captions"]
-
     segments = getTranscriptSegments(videoID=videoID,timestamps=timestamps,abandonList=abandonList)
-
-    # 存储到文件中
+    ################
+    print("write file")
     fileContent = {
         'meta':{
             'videoURL':videoURL,
@@ -186,10 +193,9 @@ def main(videoURL,theme):
         },
         'transcriptSegments':segments
     }
-    path_transcript = getTranscriptFilePath(theme=theme,videoTitle=videoTitle)
-    with open(path_transcript,"w",encoding="utf-8") as f:
-        f.write(json.dumps(fileContent,indent=4))
-    
+    writeTranscript(theme=theme,videoTitle=videoTitle,fileContent=fileContent)
+    print("done writing")
+    #################
     return videoTitle
 
 

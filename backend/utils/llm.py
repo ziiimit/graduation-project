@@ -15,7 +15,11 @@ def chat(messages,model="gpt-3.5-turbo-0125"):
         messages=messages
     )
 
-    return resp.choices[0].message.content
+    try:
+        return resp.choices[0].message.content
+    except TypeError: # 莫名其妙NoneType, 再试一次
+        return chat(messages=messages)
+
 
 
 def translate_toChinese(text):

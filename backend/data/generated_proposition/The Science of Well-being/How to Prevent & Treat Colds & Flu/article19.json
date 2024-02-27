@@ -1,0 +1,55 @@
+{
+    "meta": {
+        "theme": "The Science of Well-being",
+        "videoTitle": "How to Prevent & Treat Colds & Flu",
+        "articleSequence": 19
+    },
+    "paragraphList": [
+        {
+            "sequence": 0,
+            "proposition": [
+                "One compound is gaining attention for its potential benefits in supporting the immune system and treating colds and flu.",
+                "The compound is N-acetylcysteine (NAC).",
+                "NAC is a precursor to glutathione.",
+                "Glutathione is known as the master antioxidant in the body.",
+                "Glutathione plays a crucial role in reducing reactive oxygen and nitrogen species.",
+                "Reactive oxygen and nitrogen species tend to increase during conditions of infection and stress.",
+                "NAC is also used as a mucolytic agent.",
+                "A mucolytic agent helps to loosen and clear mucus from the respiratory system.",
+                "NAC is particularly useful for conditions like cystic fibrosis."
+            ]
+        },
+        {
+            "sequence": 1,
+            "proposition": [
+                "A study dating back to 1997 involved individuals who took 600 milligrams of NAC twice a day for six months.",
+                "The individuals who took NAC showed a significantly lower probability of contracting influenza.",
+                "The individuals who did not take NAC were compared to the ones who did.",
+                "More research is needed to establish NAC's efficacy as a preventive measure for colds and flu.",
+                "The existing data regarding NAC is promising.",
+                "Clinicians who are regularly exposed to cold and flu viruses in a hospital setting have been known to take NAC preventatively.",
+                "The purpose of taking NAC preventatively is to reduce their risk of getting sick."
+            ]
+        },
+        {
+            "sequence": 2,
+            "proposition": [
+                "One notable advantage of NAC over traditional decongestants is NAC's ability to relieve congestion without causing the rebound effect associated with decongestants.",
+                "Most over-the-counter decongestants work by causing vasoconstriction.",
+                "Once the effects of traditional decongestants wear off, congestion can worsen.",
+                "Worsening congestion can lead to discomfort and potential habit-forming behaviors.",
+                "NAC has shown to be effective in reducing congestion without the drawbacks of traditional decongestants."
+            ]
+        },
+        {
+            "sequence": 3,
+            "proposition": [
+                "When considering NAC for colds or flu, dosages typically range from 600 to 900 milligrams three times a day.",
+                "It is advised to consult with a healthcare provider before adding or removing any supplements from your regimen.",
+                "NAC shows promise as a supplement for immune support and respiratory health.",
+                "Individual preferences and responses to different remedies may vary.",
+                "It is essential to explore various options and find what works best for your body when managing colds and flu symptoms."
+            ]
+        }
+    ]
+}

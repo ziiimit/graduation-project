@@ -1,0 +1,37 @@
+{
+    "meta": {
+        "type": "article",
+        "theme": "The Science of Well-being",
+        "videoTitle": "How to Prevent & Treat Colds & Flu",
+        "articleSequence": 2
+    },
+    "title_en": "Flu Virus & Transmission; Flu Shots",
+    "title_zh": "\u6d41\u611f\u75c5\u6bd2\u548c\u4f20\u64ad\uff1b\u6d41\u611f\u75ab\u82d7",
+    "paragraphList": [
+        {
+            "sequence": 0,
+            "text_en": "The flu virus is a type of virus that, similar to the cold virus, comes in different variations known as serotypes. There are three main categories of flu viruses: type A, type B, and type C. These variations are based on the different proteins expressed on their surface. For example, the Spanish Flu, a devastating pandemic that occurred between 1918 and 1920, was caused by a type A H1N1 virus. It's important to note that the common flu viruses fall under the category of type A, which is responsible for causing seasonal flu outbreaks.",
+            "text_zh": "\u6d41\u611f\u75c5\u6bd2\u662f\u4e00\u79cd\u75c5\u6bd2\uff0c\u4e0e\u666e\u901a\u611f\u5192\u75c5\u6bd2\u7c7b\u4f3c\uff0c\u4ee5\u591a\u79cd\u4e0d\u540c\u8840\u6e05\u578b\u522b\u7684\u5f62\u5f0f\u5b58\u5728\u3002\u6d41\u611f\u75c5\u6bd2\u4e3b\u8981\u5206\u4e3a\u4e09\u7c7b\uff1aA\u578b\u3001B\u578b\u548cC\u578b\u3002\u8fd9\u4e9b\u53d8\u5f02\u53d6\u51b3\u4e8e\u5b83\u4eec\u8868\u9762\u4e0a\u6240\u8868\u8fbe\u7684\u4e0d\u540c\u86cb\u767d\u8d28\u3002\u4f8b\u5982\uff0c\u897f\u73ed\u7259\u6d41\u611f\u662f\u57281918\u5e74\u52301920\u5e74\u671f\u95f4\u7206\u53d1\u7684\u4e00\u573a\u6bc1\u706d\u6027\u5927\u6d41\u884c\u75c5\uff0c\u7531A\u578bH1N1\u75c5\u6bd2\u5f15\u8d77\u3002\u503c\u5f97\u6ce8\u610f\u7684\u662f\uff0c\u666e\u901a\u6d41\u611f\u75c5\u6bd2\u5c5e\u4e8eA\u578b\u7c7b\u522b\uff0c\u8d1f\u8d23\u5f15\u53d1\u5b63\u8282\u6027\u6d41\u611f\u7206\u53d1\u3002"
+        },
+        {
+            "sequence": 1,
+            "text_en": "The transmission of the flu virus primarily occurs through human-to-human contact. The flu virus can be contracted by being exposed to respiratory droplets from an infected person's sneeze or cough. It can also be transmitted by touching surfaces contaminated with the virus and then touching the face, allowing the virus to enter the body through mucous membranes. Unlike the cold virus, the flu virus can only survive on surfaces for about two hours. This means that direct contact with an infected individual is the primary mode of transmission.",
+            "text_zh": "\u6d41\u611f\u75c5\u6bd2\u4e3b\u8981\u901a\u8fc7\u4eba\u4e0e\u4eba\u4e4b\u95f4\u7684\u63a5\u89e6\u4f20\u64ad\u3002\u611f\u67d3\u6d41\u611f\u75c5\u6bd2\u53ef\u4ee5\u901a\u8fc7\u66b4\u9732\u4e8e\u611f\u67d3\u8005\u6253\u55b7\u568f\u6216\u54b3\u55fd\u65f6\u4ea7\u751f\u7684\u547c\u5438\u9053\u98de\u6cab\u800c\u83b7\u5f97\u3002\u4e5f\u53ef\u4ee5\u901a\u8fc7\u89e6\u6478\u53d7\u75c5\u6bd2\u6c61\u67d3\u7684\u8868\u9762\u7136\u540e\u89e6\u78b0\u9762\u90e8\u800c\u4f20\u64ad\uff0c\u4f7f\u75c5\u6bd2\u901a\u8fc7\u9ecf\u819c\u8fdb\u5165\u4f53\u5185\u3002\u4e0d\u540c\u4e8e\u666e\u901a\u611f\u5192\u75c5\u6bd2\uff0c\u6d41\u611f\u75c5\u6bd2\u5728\u8868\u9762\u4e0a\u53ea\u80fd\u5b58\u6d3b\u7ea6\u4e24\u4e2a\u5c0f\u65f6\u3002\u8fd9\u610f\u5473\u7740\u76f4\u63a5\u63a5\u89e6\u611f\u67d3\u8005\u662f\u4e3b\u8981\u7684\u4f20\u64ad\u65b9\u5f0f\u3002"
+        },
+        {
+            "sequence": 2,
+            "text_en": "To combat the spread of the flu virus, vaccines, commonly known as flu shots, are developed each year targeting specific strains of the virus. The effectiveness of the flu shot varies depending on the match between the vaccine and the circulating flu strains. Studies have shown that getting the flu shot can reduce the risk of contracting the prevalent flu strain by 40% to 60% in a given season. Furthermore, even if an individual still gets the flu after receiving the vaccine, the symptoms may be less severe.",
+            "text_zh": "\u4e3a\u4e86\u5bf9\u6297\u6d41\u611f\u75c5\u6bd2\u7684\u4f20\u64ad\uff0c\u5e38\u7528\u88ab\u79f0\u4e3a\u6d41\u611f\u75ab\u82d7\u7684\u75ab\u82d7\u6bcf\u5e74\u90fd\u4f1a\u7814\u53d1\u51fa\u6765\uff0c\u9488\u5bf9\u7279\u5b9a\u83cc\u682a\u7684\u6d41\u611f\u75c5\u6bd2\u3002\u6d41\u611f\u75ab\u82d7\u7684\u6709\u6548\u6027\u53d6\u51b3\u4e8e\u75ab\u82d7\u4e0e\u6d41\u884c\u7684\u6d41\u611f\u83cc\u682a\u4e4b\u95f4\u7684\u5339\u914d\u7a0b\u5ea6\u3002\u7814\u7a76\u8868\u660e\uff0c\u63a5\u79cd\u6d41\u611f\u75ab\u82d7\u53ef\u4ee5\u5728\u67d0\u4e2a\u5b63\u8282\u5185\u5c06\u611f\u67d3\u4e3b\u8981\u6d41\u611f\u83cc\u682a\u7684\u98ce\u9669\u964d\u4f4e40%\u523060%\u3002\u6b64\u5916\uff0c\u5373\u4f7f\u63a5\u79cd\u4e86\u75ab\u82d7\u540e\u4ecd\u7136\u611f\u67d3\u4e86\u6d41\u611f\uff0c\u75c7\u72b6\u4e5f\u53ef\u80fd\u8f83\u8f7b\u3002"
+        },
+        {
+            "sequence": 3,
+            "text_en": "The decision to get a flu shot is a personal one and depends on factors such as individual health status and level of exposure to potential sources of the virus. While some people opt not to get vaccinated due to lower risk factors or personal preferences, others may choose to get vaccinated to protect themselves and vulnerable individuals around them, such as those who are immunocompromised or in high-risk environments like schools or healthcare settings.",
+            "text_zh": "\u63a5\u79cd\u6d41\u611f\u75ab\u82d7\u7684\u51b3\u5b9a\u662f\u4e2a\u4eba\u7684\uff0c\u53d6\u51b3\u4e8e\u8bf8\u5982\u4e2a\u4eba\u5065\u5eb7\u72b6\u51b5\u548c\u66b4\u9732\u4e8e\u75c5\u6bd2\u6f5c\u5728\u6765\u6e90\u7684\u7a0b\u5ea6\u7b49\u56e0\u7d20\u3002\u4e00\u4e9b\u4eba\u7531\u4e8e\u8f83\u4f4e\u7684\u98ce\u9669\u56e0\u7d20\u6216\u4e2a\u4eba\u504f\u597d\u9009\u62e9\u4e0d\u63a5\u79cd\u75ab\u82d7\uff0c\u800c\u5176\u4ed6\u4eba\u53ef\u80fd\u9009\u62e9\u63a5\u79cd\u75ab\u82d7\u4ee5\u4fdd\u62a4\u81ea\u5df1\u548c\u5468\u56f4\u5bb9\u6613\u53d7\u5230\u5f71\u54cd\u7684\u4eba\uff0c\u6bd4\u5982\u514d\u75ab\u529f\u80fd\u53d7\u635f\u6216\u5904\u4e8e\u9ad8\u98ce\u9669\u73af\u5883\u7684\u4eba\uff0c\u5982\u5b66\u6821\u6216\u533b\u7597\u4fdd\u5065\u673a\u6784\u91cc\u7684\u4eba\u3002"
+        },
+        {
+            "sequence": 4,
+            "text_en": "Ultimately, getting the flu shot is a preventative measure that can help reduce the risk of flu infection and its severity. Each individual should consider their own circumstances and consult with healthcare professionals to make an informed decision about whether getting the flu shot is the right choice for them.",
+            "text_zh": "\u6700\u7ec8\uff0c\u63a5\u79cd\u6d41\u611f\u75ab\u82d7\u662f\u4e00\u79cd\u9884\u9632\u63aa\u65bd\uff0c\u6709\u52a9\u4e8e\u964d\u4f4e\u6d41\u611f\u611f\u67d3\u7684\u98ce\u9669\u548c\u4e25\u91cd\u7a0b\u5ea6\u3002\u6bcf\u4e2a\u4eba\u90fd\u5e94\u8be5\u8003\u8651\u81ea\u5df1\u7684\u60c5\u51b5\uff0c\u5e76\u54a8\u8be2\u533b\u7597\u4e13\u4e1a\u4eba\u5458\uff0c\u4ee5\u4fbf\u5c31\u662f\u5426\u63a5\u79cd\u6d41\u611f\u75ab\u82d7\u505a\u51fa\u660e\u667a\u7684\u51b3\u5b9a\u3002"
+        }
+    ]
+}

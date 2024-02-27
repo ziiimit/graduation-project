@@ -11,7 +11,7 @@
 </template>
 <script>
 export default {
-    name: "",
+    name: "ArticleListItem",
     props: ['articleTitle_zh', 'articleTitle_en', 'summary_zh']
 }
 </script>

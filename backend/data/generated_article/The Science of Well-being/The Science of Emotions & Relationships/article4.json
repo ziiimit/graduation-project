@@ -1,0 +1,32 @@
+{
+    "meta": {
+        "type": "article",
+        "theme": "The Science of Well-being",
+        "videoTitle": "The Science of Emotions & Relationships",
+        "articleSequence": 4
+    },
+    "title_en": "Digital Tool For Predicting Your Emotions: Mood Meter App",
+    "title_zh": "\u6570\u5b57\u5de5\u5177\uff0c\u9884\u6d4b\u60a8\u7684\u60c5\u7eea\uff1a\u60c5\u7eea\u8ba1\u91cf\u5668\u5e94\u7528\u7a0b\u5e8f",
+    "paragraphList": [
+        {
+            "sequence": 0,
+            "text_en": "The Mood Meter app, developed by researchers at Yale University, offers users a unique digital tool to delve deeper into the realm of emotions. The app aims to enhance our understanding of emotions by providing a more nuanced approach to expressing how we feel and even predicting our future emotional states. Available on both Apple and Android platforms, the Mood Meter prompts users to assess their current emotional state by selecting from categories such as high energy and pleasant, high energy and unpleasant, low energy and pleasant, or low energy and unpleasant.",
+            "text_zh": "\u60c5\u7eea\u8ba1\u91cf\u5668\u5e94\u7528\u7a0b\u5e8f\u662f\u7531\u8036\u9c81\u5927\u5b66\u7684\u7814\u7a76\u4eba\u5458\u5f00\u53d1\u7684\uff0c\u4e3a\u7528\u6237\u63d0\u4f9b\u4e86\u4e00\u4e2a\u72ec\u7279\u7684\u6570\u5b57\u5de5\u5177\uff0c\u8ba9\u4ed6\u4eec\u6df1\u5165\u63a2\u7d22\u60c5\u7eea\u7684\u9886\u57df\u3002\u8be5\u5e94\u7528\u65e8\u5728\u901a\u8fc7\u63d0\u4f9b\u66f4\u52a0\u7cbe\u7ec6\u5316\u7684\u8868\u8fbe\u65b9\u5f0f\u6765\u589e\u8fdb\u6211\u4eec\u5bf9\u60c5\u7eea\u7684\u7406\u89e3\uff0c\u751a\u81f3\u9884\u6d4b\u6211\u4eec\u672a\u6765\u7684\u60c5\u7eea\u72b6\u6001\u3002\u60c5\u7eea\u8ba1\u91cf\u5668\u5728\u82f9\u679c\u548c\u5b89\u5353\u5e73\u53f0\u4e0a\u90fd\u53ef\u7528\uff0c\u5b83\u63d0\u793a\u7528\u6237\u901a\u8fc7\u9009\u62e9\u8bf8\u5982\u9ad8\u80fd\u91cf\u548c\u6109\u5feb\u3001\u9ad8\u80fd\u91cf\u548c\u4e0d\u6109\u5feb\u3001\u4f4e\u80fd\u91cf\u548c\u6109\u5feb\u3001\u6216\u4f4e\u80fd\u91cf\u548c\u4e0d\u6109\u5feb\u7b49\u7c7b\u522b\u6765\u8bc4\u4f30\u4ed6\u4eec\u5f53\u524d\u7684\u60c5\u7eea\u72b6\u6001\u3002"
+        },
+        {
+            "sequence": 1,
+            "text_en": "Upon selecting how they feel, users are presented with a visual color spectrum and are asked to pinpoint where their emotions fall on the spectrum. As users move their finger across the colors, descriptive words such as motivated, cheerful, or inspired pop up, aiding them in identifying and articulating their emotions. By collecting data inputted by users over time, the app leverages this information to provide insights into emotional patterns and trends, assisting users in predicting their emotional states at different times throughout the day.",
+            "text_zh": "\u5728\u9009\u62e9\u60c5\u7eea\u540e\uff0c\u7528\u6237\u4f1a\u770b\u5230\u4e00\u4e2a\u89c6\u89c9\u8272\u8c31\uff0c\u5e76\u88ab\u8981\u6c42\u6307\u51fa\u4ed6\u4eec\u7684\u60c5\u7eea\u843d\u5728\u8272\u8c31\u7684\u54ea\u4e2a\u4f4d\u7f6e\u3002\u5f53\u7528\u6237\u5728\u989c\u8272\u4e0a\u79fb\u52a8\u624b\u6307\u65f6\uff0c\u4f1a\u5f39\u51fa\u63cf\u8ff0\u6027\u8bcd\u8bed\uff0c\u5982\u6709\u52a8\u529b\u7684\u3001\u6109\u5feb\u7684\u6216\u8005\u53d7\u542f\u53d1\u7684\uff0c\u5e2e\u52a9\u7528\u6237\u8bc6\u522b\u548c\u8868\u8fbe\u4ed6\u4eec\u7684\u60c5\u7eea\u3002\u901a\u8fc7\u968f\u65f6\u95f4\u6536\u96c6\u7528\u6237\u8f93\u5165\u7684\u6570\u636e\uff0c\u8be5\u5e94\u7528\u5229\u7528\u8fd9\u4e9b\u4fe1\u606f\u6765\u63d0\u4f9b\u60c5\u7eea\u6a21\u5f0f\u548c\u8d8b\u52bf\u7684\u89c1\u89e3\uff0c\u5e2e\u52a9\u7528\u6237\u9884\u6d4b\u4e00\u5929\u4e2d\u4e0d\u540c\u65f6\u95f4\u7684\u60c5\u7eea\u72b6\u6001\u3002"
+        },
+        {
+            "sequence": 2,
+            "text_en": "One of the fundamental insights offered by the Mood Meter app is the idea that our language may not always be adequate in fully capturing the complexities of our emotions. The app's approach highlights the inherent challenges in articulating the breadth of human emotional experiences, while also emphasizing the essential elements that constitute an emotion.",
+            "text_zh": "\u60c5\u7eea\u8868 app \u63d0\u4f9b\u7684\u57fa\u672c\u89c1\u89e3\u4e4b\u4e00\u662f\uff0c\u6211\u4eec\u7684\u8bed\u8a00\u53ef\u80fd\u5e76\u4e0d\u603b\u662f\u8db3\u4ee5\u5b8c\u5168\u6355\u6349\u6211\u4eec\u60c5\u7eea\u7684\u590d\u6742\u6027\u3002\u8be5\u5e94\u7528\u7a0b\u5e8f\u7684\u65b9\u6cd5\u5f3a\u8c03\u4e86\u5728\u8868\u8fbe\u4eba\u7c7b\u60c5\u7eea\u4f53\u9a8c\u7684\u5e7f\u5ea6\u65f6\u6240\u9762\u4e34\u7684\u56fa\u6709\u6311\u6218\uff0c\u540c\u65f6\u4e5f\u5f3a\u8c03\u4e86\u6784\u6210\u4e00\u79cd\u60c5\u7eea\u7684\u57fa\u672c\u8981\u7d20\u3002"
+        },
+        {
+            "sequence": 3,
+            "text_en": "In conclusion, the Mood Meter app serves as a valuable resource for individuals seeking to deepen their emotional self-awareness and gain insights into their emotional well-being. Through its innovative features and user-friendly interface, the app offers a pathway to a more nuanced understanding of emotions and a tool for predicting and managing emotional states.",
+            "text_zh": "\u603b\u4e4b\uff0c\u60c5\u7eea\u8ba1\u91cf\u5668\u5e94\u7528\u7a0b\u5e8f\u662f\u4e00\u4e2a\u5bf9\u4e8e\u5e0c\u671b\u52a0\u6df1\u81ea\u6211\u60c5\u7eea\u610f\u8bc6\u5e76\u4e86\u89e3\u81ea\u8eab\u60c5\u7eea\u5065\u5eb7\u7684\u4e2a\u4eba\u6765\u8bf4\u5177\u6709\u4ef7\u503c\u7684\u8d44\u6e90\u3002\u901a\u8fc7\u5176\u521b\u65b0\u7279\u6027\u548c\u7528\u6237\u53cb\u597d\u7684\u754c\u9762\uff0c\u8be5\u5e94\u7528\u7a0b\u5e8f\u63d0\u4f9b\u4e86\u4e00\u6761\u901a\u5f80\u5bf9\u60c5\u7eea\u66f4\u52a0\u7ec6\u81f4\u7406\u89e3\u7684\u9053\u8def\uff0c\u540c\u65f6\u4e5f\u662f\u9884\u6d4b\u548c\u7ba1\u7406\u60c5\u7eea\u72b6\u6001\u7684\u5de5\u5177\u3002"
+        }
+    ]
+}

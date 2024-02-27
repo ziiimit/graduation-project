@@ -4,7 +4,7 @@ PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
 sys.path.append(PROJECT_ROOT)
 import json
 from utils.path import *
-from backend.utils.dataDirReadandWrite import readTranscript
+from utils.dataDirReadandWrite import readTranscript,writeArticle,writeIntro
 from utils.llm import chat
 from utils.llm import translate_toChinese
 
@@ -49,7 +49,7 @@ def generateArticle(text,segmentTitle):
         Text:{text}
     """
     messages=[
-        {"role":"system", "content":"Your job is to write an essay based on the given text around the given topic"},
+        {"role":"system", "content":"Your job is to write an professional article based on the given text around the given topic"},
         {"role":"system", "content":"Preserve the explantory context, make sure the essay is detailed and can be understood by a high school student"},
         {"role":"system", "content":"Don't make up information that is not mentioned"},
         {"role":"system", "content":"Don't provide title, response should only contain paragraphs"},
@@ -67,20 +67,21 @@ def generateArticle(text,segmentTitle):
     return res
 
 
-
-def main(theme,videoTitle):
+# startForm: 中途出问题寄在半中间，不需要重新来
+# 注意，这里的0是intro, 1才是article0
+def main(theme,videoTitle,startFrom=0):
 
     # 获取transcript的segments
     segments = readTranscript(theme=theme,videoTitle=videoTitle)['transcriptSegments']
 
-    for i in range(len(segments)):
-            
+    for i in range(startFrom,len(segments)):
+
             text = segments[i]['text']
             segmentTitle = segments[i]['segmentTitle']
 
             # 生成intro
             if i == 0:
-
+                print("generating intro")
                 filteredText = filterIrrelevantContent(text=text,segmentTitle=segmentTitle)
                 intro = generateIntro(text=filteredText,segmentTitle=segmentTitle,videoTitle=videoTitle)
                 
@@ -93,25 +94,24 @@ def main(theme,videoTitle):
                     'text_en':intro,
                     "text_zh":translate_toChinese(intro)
                 }
-                path_intro = getIntroFilePath(theme=theme,videoTitle=videoTitle)
-                with open(path_intro,'w',encoding='utf-8') as f:
-                    f.write(json.dumps(fileContent,indent=4))
-
+                print('writing intro')
+                writeIntro(theme=theme,videoTitle=videoTitle,fileContent=fileContent)
             else:
+                articleSequence = i-1
+                print(f'generating article{articleSequence}')
                 # 生成文章
                 fileContent = {
                     "meta":{
                         'type':'article',
                         'theme':theme,
                         'videoTitle':videoTitle,
-                        'articleSequence':i-1
+                        'articleSequence':articleSequence
                     },
                     'title_en':segmentTitle,
                     'title_zh':translate_toChinese(segmentTitle),
                     'paragraphList':generateArticle(text=text,segmentTitle=segmentTitle)
                 }
-                path_article = getArticleFilePath(theme=theme,videoTitle=videoTitle,fileIndex=i-1)
-                with open(path_article,'w',encoding='utf-8') as f:
-                    f.write(json.dumps(fileContent,indent=4))
+                print(f'writing article{articleSequence}')
+                writeArticle(theme=theme,videoTitle=videoTitle,articleSequence=articleSequence,fileContent=fileContent)
 
 
