@@ -7,12 +7,22 @@ import json
 
 # meta
     # 读取meta中的第index个元素
-def readMeta(index=-1):
+def readSingleMeta(index=-1):
     path_meta = getMetaFilePath()
     f = open(path_meta, 'r',encoding='utf-8')
     fileContent = json.load(f)
     f.close()
     return fileContent[index]
+
+    # 读取所有
+def readAllMeta():
+    path_meta = getMetaFilePath()
+    f = open(path_meta, 'r',encoding='utf-8')
+    fileContent = json.load(f)
+    f.close()
+    return fileContent
+
+
     # 向meta中的第index元素中添加爬取的videoTitle属性
 def appendMeta(videoURL,theme,videoTitle):
     path_meta = getMetaFilePath()

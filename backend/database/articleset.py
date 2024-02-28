@@ -46,5 +46,16 @@ def getArticleSet(articleSetTitle_en):
             """,articleSetTitle_en=articleSetTitle_en)
 
             return res.data()
-        
+
+
+# 删除某个as及其子图
+def deleteArticleSet(articleSetTitle_en):
+        with GraphDatabase.driver(URI, auth=AUTH) as driver:
+            driver.verify_connectivity()
+            with driver.session(database="neo4j") as session:
+
+                res = session.run("""
+                    MATCH (as:ArticleSet {title_en:$articleSetTitle_en})-[:HAS]->(a:Article)-[:CONSTRUCTED_BY]->(p:Paragraph)
+                    detach delete as,a,p
+                """,articleSetTitle_en=articleSetTitle_en)
 

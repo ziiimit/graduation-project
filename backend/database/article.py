@@ -4,6 +4,7 @@ URI = "neo4j://localhost:7687"
 AUTH = ("neo4j","13320113557Hsh")
 
 
+
 # 创建Article, 同时插入Paragraph
 def createArticle_insertParagraph(videoTitle,sequence,title_en,title_zh,paragraphs):
 
@@ -58,4 +59,3 @@ def getArticle(articleSetTitle_en,articleSequence):
                 "paragraphs":paragraphs
             }
                 
-

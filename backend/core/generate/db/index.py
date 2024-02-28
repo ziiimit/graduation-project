@@ -47,6 +47,7 @@ def storeArticle_storePararaph(theme,videoTitle):
 def storeProposition_generateEmbedding(theme,videoTitle):
     print('storing proposition')
     propositionFilePathList = getPropositionFilePathList(theme=theme, videoTitle=videoTitle)
+    print(f"totle file num : {len(propositionFilePathList)}")
     for articleSequence in range(len(propositionFilePathList)):
         print(f"--article{articleSequence}")
         proposition = readProposition(theme=theme,videoTitle=videoTitle,articleSequence=articleSequence)
@@ -68,5 +69,7 @@ def storeSummary(theme,videoTitle):
         insertSummary(videoTitle=videoTitle,articleSequence=articleSequence,summary_en=summary_en,summary_zh=summary_zh)
 
 
+
+                       
 
 

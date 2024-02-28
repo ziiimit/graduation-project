@@ -37,12 +37,11 @@ def createPropositonForParagraph(videoTitle,articleSequence,paragraphSequence,pr
         with driver.session(database="neo4j") as session:
 
             for proposition in propositionList:
+                # print("proposition:",proposition)
                 embedding = generateEmbedding(proposition)
                 session.run("""
-                    MATCH (:ArticleSet {videoTitle:$videoTitle})-[:HAS]->(:Article {sequence:$articleSequence})-[:CONSTRUCTED_BY]->(p:Paragraph {sequence:$paragraphSequence})
+                    MATCH (:ArticleSet {title_en:$videoTitle})-[:HAS]->(:Article {sequence:$articleSequence})-[:CONSTRUCTED_BY]->(p:Paragraph {sequence:$paragraphSequence})
                     CREATE (prop:Proposition {text:$text})-[:GENERATED_FROM]->(p)
                     WITH prop
                     CALL db.create.setNodeVectorProperty(prop, 'embedding', $vector)
                 """, videoTitle=videoTitle, articleSequence=articleSequence, paragraphSequence=paragraphSequence,text=proposition,vector=embedding)
-
-
