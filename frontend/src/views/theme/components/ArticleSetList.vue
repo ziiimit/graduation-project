@@ -9,7 +9,7 @@
                 </div>
                 <Transition name="from-left-to-left">
                     <div class="intro" v-show="introVisible[index]">
-                        <div class="intro_zh">{{ articleSet['intro_zh'] }}</div>
+                        <div class="intro_zh"><div class="content">{{ articleSet['intro_zh'] }}</div></div>
                         <!-- <div class="intro_en">{{ articleSet['intro_en'] }}</div> -->
                     </div>
                 </Transition>
@@ -138,18 +138,17 @@ li {
     }
 }
 
+
 .intro_zh {
     position: absolute;
-    // top: 40px;
     z-index: 10;
     width: 350px;
     font-size: 13px;
-    padding: 1em 1.5em;
+    padding: 10px;
     border-radius: 1em;
-    color: whitesmoke;
     height: 200px;
     transform: translate(5em, 0.9em);
-    line-height: 1.5em;
+    line-height: 20px;
     text-indent: 2em;
 
     .theme0 & {
@@ -175,6 +174,34 @@ li {
 
     .theme2 & {
         background-color: $theme2-light;
+    }
+}
+
+.intro_zh .content{
+    position: relative;
+    color: whitesmoke;
+    height: 180px;
+    overflow: hidden;
+    &::after{
+        content:"......";
+        text-indent: 0;
+        display: block;
+        position: absolute;
+        color: whitesmoke;
+        width: 2em;
+        bottom: 0px;
+        right: 4.5px;
+        .theme0 & {
+        background-color: $theme0-light;
+    }
+
+    .theme1 & {
+        background-color: $theme1-light;
+    }
+
+    .theme2 & {
+        background-color: $theme2-light;
+    }
     }
 }
 
